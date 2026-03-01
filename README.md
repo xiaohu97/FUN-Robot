@@ -49,6 +49,30 @@
 
 ---
 
+## 🔥 精选条目预览区
+
+### 精选论文（建议先看）
+
+| 论文 | 方向 | 为什么值得看 |
+|---|---|---|
+| [EmbodMocap](https://arxiv.org/abs/2602.23205) | 数据与4D重建 | 低成本真实场景数据采集，对具身训练数据基础设施价值高 |
+| [LessMimic](https://arxiv.org/abs/2602.21723) | 长时任务控制 | 聚焦人形长时交互与多任务泛化，贴近真实落地需求 |
+| [Humanizing Robot Gaze Shifts](https://arxiv.org/abs/2602.21983) | 人机交互 | 解决社交交互自然度问题，直接影响服务场景体验 |
+| [RT-2](https://arxiv.org/abs/2307.15818) | VLA | 视觉语言能力与机器人动作融合的代表性工作 |
+| [AMP](https://arxiv.org/abs/2104.02180) | 人形运动控制 | 人形动作自然化与稳定性提升的经典路线 |
+
+### 精选开源项目（建议先跑）
+
+| 项目 | 类型 | 适合做什么 |
+|---|---|---|
+| [LeRobot](https://github.com/huggingface/lerobot) | 训练框架 | 快速搭建“数据→策略→评估”流水线 |
+| [IsaacLab](https://github.com/isaac-sim/IsaacLab) | 仿真平台 | 做大规模仿真训练和 sim2real 实验 |
+| [humanoid-gym](https://github.com/roboterax/humanoid-gym) | 人形控制 | 人形步态/平衡控制入门与基线 |
+| [MoveIt 2](https://github.com/moveit/moveit2) | 运动规划 | 机械臂与全身规划任务落地 |
+| [RoboMimic](https://github.com/ARISE-Initiative/robomimic) | 模仿学习 | 基于示教数据训练操作策略 |
+
+---
+
 ## 标签体系（示例）
 
 - 任务标签：`locomotion` `manipulation` `whole-body-control` `imitation-learning` `VLA`
