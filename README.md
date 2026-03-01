@@ -26,6 +26,7 @@
 |---|---|---|
 | 分类目录 | 全局知识结构与方向树 | [taxonomy.md](./humanoid-awesome/taxonomy.md) |
 | 论文合集 | 30条论文可读版（每条2~3行中文解读+标签） | [papers.md](./humanoid-awesome/papers/papers.md) |
+| 2026 Jan-Feb arXiv专题 | humanoid关键词检索，逐篇简介+链接+方向分类（109篇） | [arxiv-2026-01-02-humanoid.md](./humanoid-awesome/papers/arxiv-2026-01-02-humanoid.md) |
 | 项目合集 | 20条开源项目可读版（解读+应用标签） | [projects.md](./humanoid-awesome/projects/projects.md) |
 | 数据集 | 数据集收录模板（待扩展） | [datasets/README.md](./humanoid-awesome/datasets/README.md) |
 | Benchmark | 基准收录模板（待扩展） | [benchmarks/README.md](./humanoid-awesome/benchmarks/README.md) |
@@ -46,6 +47,16 @@
 - 数据与仿真（Sim2Real）
 - 人机交互（HRI）
 - 产业应用（零售/仓储/物流等）
+
+---
+
+## 📌 2026年1-2月 arXiv humanoid 统计（新增）
+
+- 检索口径：`all:humanoid OR all:"humanoid robot"`
+- 时间范围：2026-01-01 ~ 2026-02-28
+- 总篇数：**109篇**（**1月 40篇**，**2月 69篇**）
+- 已完成：按研究方向分类，并为每篇给出简短介绍 + 论文链接
+- 详单入口：[`humanoid-awesome/papers/arxiv-2026-01-02-humanoid.md`](./humanoid-awesome/papers/arxiv-2026-01-02-humanoid.md)
 
 ---
 
