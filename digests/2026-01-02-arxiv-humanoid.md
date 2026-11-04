@@ -1,5 +1,7 @@
 # 2026年1-2月 arXiv「humanoid」论文整理（自动初版）
 
+> ⬅️ 返回 [进展速递索引](./README.md)　｜　本期为关键词检索的自动初版，“简介”多为英文摘要首句，欢迎按 [`templates/digest.md`](../templates/digest.md) 补充中文解读；值得长期保留的论文已升级进 [`papers/05-humanoid.md`](../papers/05-humanoid.md) 等分类清单。
+
 - 检索口径：`all:humanoid OR all:"humanoid robot"`
 - 时间范围：2026-01-01 ~ 2026-02-28（按 arXiv submittedDate 过滤）
 - 总篇数：**109**（1月 **40**，2月 **69**）
