@@ -1,0 +1,54 @@
+name: 📄 推荐论文
+description: 推荐一篇值得收录的机器人 / 具身智能论文
+title: "[论文推荐] "
+labels: ["paper"]
+body:
+  - type: input
+    id: link
+    attributes:
+      label: 论文链接
+      description: 优先填写 arXiv 链接（不带版本号），如 https://arxiv.org/abs/2410.24164
+    validations:
+      required: true
+  - type: input
+    id: short
+    attributes:
+      label: 简称
+      placeholder: "π0"
+  - type: dropdown
+    id: topic
+    attributes:
+      label: 建议分类
+      options:
+        - 01 VLA 与机器人基础模型
+        - 02 具身推理与任务规划
+        - 03 模仿学习与策略学习
+        - 04 强化学习与足式运动控制
+        - 05 人形机器人
+        - 06 操作、抓取与灵巧手
+        - 07 世界模型与视频生成
+        - 08 视觉表征与 3D 场景理解
+        - 09 具身导航与移动操作
+        - 10 数据采集、遥操作与数据集
+        - 11 仿真平台、Sim2Real 与评测基准
+        - 12 综述与教程
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: 经典 / 最新
+      options:
+        - 🚀 最新进展
+        - 🏛 经典论文
+  - type: textarea
+    id: summary
+    attributes:
+      label: 一句话贡献（中文，≤60 字）
+      placeholder: "VLM + flow matching 动作专家，输出 50Hz 连续动作，完成叠衣服等长程灵巧任务"
+    validations:
+      required: true
+  - type: input
+    id: code
+    attributes:
+      label: 代码 / 项目主页（可选）
