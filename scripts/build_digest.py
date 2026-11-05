@@ -27,25 +27,32 @@ DIGESTS = ROOT / "digests"
 DATA = ROOT / "data"
 
 # (编号, 中文名, 正则)。标题命中权重 3，摘要命中权重 1；得分相同按列表顺序优先。
+# 01~18 对应 papers/ 下的分类文件；19~24 是只在月报中自动追踪的其他机器人方向。
 TOPICS: list[tuple[str, str, str]] = [
-    ("12", "综述与教程", r"\b(?:survey|review|tutorial|overview|roadmap|position paper)\b"),
+    ("18", "综述与教程", r"\b(?:survey|review|tutorial|overview|roadmap|position paper)\b"),
     ("01", "VLA 与机器人基础模型", r"vision[- ]language[- ]action|VLAs?\b|robot(?:ic)? foundation model|generalist (?:robot )?polic|foundation polic|cross[- ]embodiment|robot(?:ic)? (?:large )?model|\bπ0|\bpi0"),
-    ("05", "人形机器人", r"\bhumanoids?\b|whole[- ]body (?:control|motion|teleop|track|loco)|motion tracking|motion retarget|\bretarget|behavior foundation model"),
-    ("07", "世界模型与视频生成", r"world[- ]models?\b|world[- ]action model|\bWAMs?\b|video (?:generation|prediction|diffusion|world)|generative simulat|action[- ]conditioned video"),
-    ("02", "具身推理与任务规划", r"large language model|\bLLMs?\b|\bVLMs?\b|vision[- ]language model|task planning|embodied reasoning|spatial reasoning|chain[- ]of[- ]thought|\breasoning\b|reward (?:design|model|function)|code generation|agentic"),
-    ("09", "具身导航与移动操作", r"\bnavigation\b|\bVLN\b|object[- ]goal|exploration|mobile manipulat|\bwayfinding|semantic map"),
-    ("06", "操作、抓取与灵巧手", r"\bgrasp|manipulation|dexterous|in[- ]hand|\btactile|\bassembly\b|bimanual|deformable|\bcloth|articulated object|pick[- ]and[- ]place|contact[- ]rich|\bgripper"),
-    ("03", "模仿学习与策略学习", r"imitation learning|behavio(?:u)?r(?:al)? cloning|diffusion polic|flow[- ]matching polic|visuomotor|demonstrations?\b|action chunk|policy learning|learning from (?:human|video)"),
-    ("04", "强化学习与足式运动控制", r"reinforcement learning|\bRL\b|quadruped|\blegged\b|locomotion|\bgait\b|policy optimization|\bPPO\b|reward shaping"),
-    ("10", "数据采集、遥操作与数据集", r"\bdatasets?\b|teleoperat|data collection|data generation|data (?:scaling|engine|pipeline)|egocentric|human videos?|motion capture|\bmocap\b"),
-    ("11", "仿真平台、Sim2Real 与评测基准", r"simulat(?:or|ion platform|ion framework)|\bbenchmark|sim[- ]?to[- ]?real|\bsim2real|digital twin|physics engine|evaluation (?:suite|framework|protocol)"),
-    ("08", "视觉表征与 3D 场景理解", r"3D reconstruction|scene (?:understanding|graph|representation)|point clouds?|pose estimation|gaussian splatting|\b3DGS\b|\bNeRF\b|segmentation|representation learning|depth estimation|object detection|affordance"),
-    ("13", "自动驾驶", r"autonomous (?:driving|vehicles?)|self[- ]driving|\bdriving\b|traffic|\blane\b|motion forecasting|end[- ]to[- ]end driving|\bBEV\b|(?:autonomous|connected|intelligent) vehicles?"),
-    ("14", "空中、水下与空间机器人", r"\bUAVs?\b|\bdrones?\b|quadrotor|quadcopter|aerial|multirotor|underwater|\bmarine\b|\bAUVs?\b|spacecraft|\bspace robot|satellite|legged? jump"),
-    ("15", "SLAM、定位与建图", r"\bSLAM\b|visual[- ]inertial|\bVIO\b|\bVINS|localization|odometry|\bmapping\b|\bLiDAR\b|calibration|place recognition|loop closure|state estimation"),
-    ("16", "运动规划与控制", r"motion planning|path planning|trajectory (?:optimization|planning|generation)|model predictive|\bMPC\b|control barrier|collision avoidance|optimal control|\bcontroller\b|kinematics|dynamics model|impedance|stability"),
-    ("17", "多机器人与人机交互", r"multi[- ]robot|multi[- ]agent|\bswarm|human[- ]robot (?:interaction|collaboration)|\bHRI\b|social robot|shared autonomy|human[- ]in[- ]the[- ]loop|user study"),
-    ("18", "医疗、软体与特种机器人", r"surgical|surgery|medical|soft robot|continuum robot|exoskeleton|prosthe|rehabilitation|agricultur|\bcrop|harvest|wearable|micro[- ]?robot|actuator design|origami"),
+    ("02", "世界动作模型（WAM）", r"world[- ]action|\bWAMs?\b|video[- ]action model|joint(?:ly)? (?:model(?:ing)?|predict(?:ing)?) (?:future )?(?:video|frames?) and actions?"),
+    ("11", "人形机器人", r"\bhumanoids?\b|whole[- ]body (?:control|motion|teleop|track|loco)|motion tracking|motion retarget|\bretarget|behavior foundation model"),
+    ("03", "世界模型与视频生成", r"world[- ]models?\b|video (?:generation|prediction|diffusion|world)|generative simulat|action[- ]conditioned video|video (?:foundation|generative) model"),
+    ("05", "机器人智能体与自我进化", r"harness(?!ing)|robot[- ]use agent|coding agents?|code[- ]as[- ]polic|LLMs? as (?:a )?polic|self[- ]evolv|self[- ]improv|recursive self|skill librar|agentic (?:robot|framework|system|manipulation)|GPT-6|frozen (?:VLA|policy|model)"),
+    ("08", "奖励模型、失败检测与恢复", r"reward models?|value models?|progress (?:estimation|reward|model)|success detect|failure (?:detection|recovery|prediction|analysis|mode)|recover(?:y|ing) from|error recovery|runtime monitor|anomaly detection|test[- ]time (?:adaptation|scaling|correction|steering)|self[- ]correct|\bjudge\b|policy steering"),
+    ("09", "记忆与长时程任务", r"(?<!GPU )(?<!CPU )\bmemory\b(?! (?:swap|footprint|usage|consumption|bandwidth|cost|overhead|efficient))|long[- ]horizon|history[- ]dependent|stateful|long[- ]context|episodic memory"),
+    ("13", "触觉与接触感知", r"\btactile|visuo[- ]?tactile|\btouch\b|haptic|force[- ]torque|\bF/T\b|contact sensing|force sensing|\bVTLA\b|tactile sensor"),
+    ("04", "具身推理与任务规划", r"large language model|\bLLMs?\b|\bVLMs?\b|vision[- ]language model|task planning|embodied reasoning|spatial reasoning|chain[- ]of[- ]thought|\breasoning\b|code generation"),
+    ("14", "具身导航与移动操作", r"\bnavigation\b|\bVLN\b|object[- ]goal|exploration|mobile manipulat|\bwayfinding|semantic map"),
+    ("12", "操作、抓取与灵巧手", r"\bgrasp|manipulation|dexterous|in[- ]hand|\bassembly\b|bimanual|deformable|\bcloth|articulated object|pick[- ]and[- ]place|contact[- ]rich|\bgripper"),
+    ("06", "模仿学习与策略学习", r"imitation learning|behavio(?:u)?r(?:al)? cloning|diffusion polic|flow[- ]matching polic|visuomotor|demonstrations?\b|action chunk|policy learning|in[- ]context (?:learning|imitation)"),
+    ("07", "强化学习与后训练", r"reinforcement learning|\bRL\b|policy optimization|\bPPO\b|\bSAC\b|post[- ]training|off[- ]policy|on[- ]policy|\bcritic\b|reward shaping|offline RL|Q[- ]learning"),
+    ("10", "足式运动控制", r"quadruped|\blegged\b|locomotion|\bgait\b|\bbiped|parkour|terrain"),
+    ("16", "数据采集、遥操作与人类视频", r"\bdatasets?\b|teleoperat|data collection|data generation|data (?:scaling|engine|pipeline|synthesis)|egocentric|human videos?|motion capture|\bmocap\b|human demonstrations?"),
+    ("17", "仿真、Sim2Real 与评测基准", r"simulat(?:or|ion platform|ion framework)|\bbenchmark|sim[- ]?to[- ]?real|\bsim2real|digital twin|physics engine|evaluation (?:suite|framework|protocol)|leaderboard"),
+    ("15", "视觉表征与 3D 场景理解", r"3D reconstruction|scene (?:understanding|graph|representation)|point clouds?|pose estimation|gaussian splatting|\b3DGS\b|\bNeRF\b|segmentation|representation learning|depth estimation|object detection|affordance"),
+    ("19", "自动驾驶", r"autonomous (?:driving|vehicles?)|self[- ]driving|\bdriving\b|traffic|\blane\b|motion forecasting|end[- ]to[- ]end driving|\bBEV\b|(?:autonomous|connected|intelligent) vehicles?"),
+    ("20", "空中、水下与空间机器人", r"\bUAVs?\b|\bdrones?\b|quadrotor|quadcopter|aerial|multirotor|underwater|\bmarine\b|\bAUVs?\b|spacecraft|\bspace robot|satellite"),
+    ("21", "SLAM、定位与建图", r"\bSLAM\b|visual[- ]inertial|\bVIO\b|\bVINS|localization|odometry|\bmapping\b|\bLiDAR\b|calibration|place recognition|loop closure|state estimation"),
+    ("22", "运动规划与控制", r"motion planning|path planning|trajectory (?:optimization|planning|generation)|model predictive|\bMPC\b|control barrier|collision avoidance|optimal control|\bcontroller\b|kinematics|dynamics model|impedance|stability"),
+    ("23", "多机器人与人机交互", r"multi[- ]robot|multi[- ]agent|\bswarm|human[- ]robot (?:interaction|collaboration)|\bHRI\b|social robot|shared autonomy|human[- ]in[- ]the[- ]loop|user study"),
+    ("24", "医疗、软体与特种机器人", r"surgical|surgery|medical|soft robot|continuum robot|exoskeleton|prosthe|rehabilitation|agricultur|\bcrop|harvest|wearable|micro[- ]?robot|actuator design|origami"),
 ]
 OTHER = ("99", "其他")
 TOPIC_NAME = {k: n for k, n, _ in TOPICS} | {OTHER[0]: OTHER[1]}
@@ -79,26 +86,31 @@ def keep(p: dict) -> bool:
 
 # 标题优先规则：标题命中则直接归类（顺序即优先级），解决“自动驾驶 VLA”“操作用世界模型”等跨方向论文
 TITLE_PRIORITY = [(k, re.compile(rx, re.I)) for k, rx in [
-    ("13", r"autonomous driving|self[- ]driving|\bdriving\b|autonomous vehicle"),
-    ("07", r"world[- ]action model|\bWAMs?\b|world models?\b"),
-    ("09", r"vision[- ]and[- ]language navigation|vision[- ]language navigation|\bVLN\b"),
+    ("19", r"autonomous driving|self[- ]driving|\bdriving\b|autonomous vehicle"),
+    ("13", r"\btactile|visuo[- ]?tactile|\bVTLA\b|\btouch\b|haptic"),
+    ("09", r"(?<!GPU )(?<!CPU )\bmemory\b(?! (?:swap|footprint|usage|consumption|bandwidth|cost|overhead|efficient))|long[- ]horizon|long[- ]context"),
+    ("05", r"harness(?!ing)|robot[- ]use agent|coding agent|code[- ]as[- ]polic|self[- ]evolv|recursive self|GPT-6|LLMs? as (?:a )?polic"),
+    ("08", r"reward models?|value models?|progress (?:estimation|reward)|success detect|failure (?:detection|recovery|prediction)|error recovery|runtime monitor|\bjudge\b"),
+    ("02", r"world[- ]action|\bWAMs?\b|video[- ]action model"),
+    ("03", r"world models?\b"),
+    ("14", r"vision[- ]and[- ]language navigation|vision[- ]language navigation|\bVLN\b"),
     ("01", r"vision[- ]language[- ]action|VLAs?\b"),
-    ("05", r"\bhumanoids?\b"),
-    ("14", r"\bUAVs?\b|\bdrones?\b|quadrotor|aerial|underwater"),
-    ("18", r"surgical|surgery|exoskeleton|soft robot|continuum robot"),
+    ("11", r"\bhumanoids?\b"),
+    ("20", r"\bUAVs?\b|\bdrones?\b|quadrotor|aerial|underwater"),
+    ("24", r"surgical|surgery|exoskeleton|soft robot|continuum robot"),
 ]]
 
 
 def classify(p: dict) -> str:
     title, abstract = p["title"], p["abstract"]
     if TOPIC_RE[0][1].search(title) and re.search(r"survey|review|tutorial|overview|roadmap", title, re.I):
-        return "12"
+        return "18"
     for k, rx in TITLE_PRIORITY:
         if rx.search(title):
             return k
     best, best_score = OTHER[0], 0
     for k, rx in TOPIC_RE:
-        if k == "12":
+        if k == "18":
             if rx.search(title) and re.search(r"survey|review|tutorial|overview|roadmap", title, re.I):
                 return k
             continue

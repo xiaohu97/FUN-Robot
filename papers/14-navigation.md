@@ -1,7 +1,7 @@
-# 09 · 具身导航与移动操作
+# 14 · 具身导航与移动操作
 
 > 让机器人“找得到、走得到”：视觉语言导航（VLN）、目标导航（ObjectNav）、通用导航基础模型，以及导航 + 操作结合的移动操作。
-> 主线：**R2R（VLN 任务定义）→ DD-PPO / SemExp（仿真大规模训练、语义地图）→ CLIP/LLM 零样本导航 → GNM / ViNT / NoMaD（导航基础模型）→ NaVid / NaVILA（视频 VLM 导航）→ 2026：统一导航 VLA 与世界动作模型**
+> 主线：**R2R → DD-PPO / SemExp → CLIP/LLM 零样本导航 → GNM / ViNT / NoMaD → NaVid / NaVILA → 2026：统一导航 VLA（ABot-N0/N1、Qwen-RobotNav）、智能体式导航（SuperNav、HarnessVLN）、视频生成导航**
 
 ⭐ = 必读　｜　条目格式见 [`templates/paper-entry.md`](../templates/paper-entry.md)
 
@@ -40,4 +40,4 @@
 | **SuperNav** · An Agentic Navigation System for Any Task in Any Scene | 2026 · arXiv | 给预训练多模态大模型配上导航技能、工具与进度管理的智能体框架，无需导航微调即可处理任意场景任意任务 | [arXiv](https://arxiv.org/abs/2610.12126) |
 | **ScaleNav** · Scalable Internet Video Pretraining for Language-Conditioned Local Navigation | 2026 · arXiv | 从互联网第一视角视频中学习目标导向的视觉动力学，三阶段世界-动作框架做语言条件局部导航 | [arXiv](https://arxiv.org/abs/2610.25690) |
 
-> 📅 **2026 年本方向全部 1065 篇 arXiv 论文**（自动分类、按热度排序）见 [2026 年度总览](../digests/2026-annual-arxiv.md#09)，按月份见 [全量月报](../digests/README.md)。上表只收录其中经人工筛选的代表作。
+> 📅 **2026 年本方向全部 943 篇 arXiv 论文**（自动分类、按热度排序）见 [2026 年度总览](../digests/2026-annual-arxiv.md#14)，按月份见 [全量月报](../digests/README.md)。上表只收录其中经人工筛选的代表作。

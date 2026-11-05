@@ -1,6 +1,6 @@
 # 📏 评测基准
 
-> 论文里“刷榜”最常见的基准，以及它们**到底在测什么**。基准对应的原始论文见 [`papers/11-simulation-benchmarks.md`](../papers/11-simulation-benchmarks.md)。
+> 论文里“刷榜”最常见的基准，以及它们**到底在测什么**。基准对应的原始论文见 [`papers/17-simulation-benchmarks.md`](../papers/17-simulation-benchmarks.md)。
 
 ## 操作（Manipulation）
 
@@ -27,7 +27,7 @@
 |---|---|---|---|---|
 | Isaac Lab 运动任务 | Isaac Sim | 四足/人形速度跟踪、复杂地形 | 速度跟踪误差、地形等级、存活率 | [代码](https://github.com/isaac-sim/IsaacLab) |
 | MuJoCo Playground | MJX | 四足、人形、灵巧手 GPU 训练与 sim2real | 回报、成功率 | [代码](https://github.com/google-deepmind/mujoco_playground) |
-| 动作跟踪（AMASS 测试集） | IsaacGym / IsaacLab | 人形跟踪参考动作的精度 | MPJPE、成功率 | 见 [`05-humanoid.md`](../papers/05-humanoid.md) |
+| 动作跟踪（AMASS 测试集） | IsaacGym / IsaacLab | 人形跟踪参考动作的精度 | MPJPE、成功率 | 见 [`11-humanoid.md`](../papers/11-humanoid.md) |
 
 ## SOTA 记录（手动维护）
 

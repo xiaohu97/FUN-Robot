@@ -1,7 +1,7 @@
-# 10 · 数据采集、遥操作与大规模数据集
+# 16 · 数据采集、遥操作与人类视频
 
-> 数据是具身智能的最大瓶颈。三条路线：**真机遥操作**（ALOHA、GELLO、VR）、**无机器人采集**（UMI、DexCap、人类视频）、**自动数据生成/增广**（MimicGen）。
-> 数据集详细字段（规模、模态、许可证）见 [`datasets/README.md`](../datasets/README.md)。
+> 数据是具身智能的最大瓶颈。三条路线：**真机遥操作**（ALOHA、GELLO、VR）、**无机器人采集**（UMI、手机采集）、**人类视频**（第一视角视频 → 机器人数据），以及自动数据生成（MimicGen）。2026 年人类视频规模达到百万小时级。
+> 数据集详细字段见 [`datasets/README.md`](../datasets/README.md)。
 
 ⭐ = 必读　｜　条目格式见 [`templates/paper-entry.md`](../templates/paper-entry.md)
 
@@ -38,4 +38,4 @@
 | **Open-AoE** · An Open Egocentric Manipulation Dataset and Toolchain for Embodied Learning | 2026 · arXiv | 开放的第一视角操作数据集与工具链：从手机采集到跨本体重定向、VLA / WAM / 世界模型训练配方 | [arXiv](https://arxiv.org/abs/2607.14183) |
 | **Ego2Robot** · Scalable Robot Data Synthesis from Egocentric Human Data | 2026 · arXiv | 把第一视角人类操作视频转成机器人训练数据（动作重定向 + 机械臂画面合成 + 多级质量筛选），提升分布外泛化 | [arXiv](https://arxiv.org/abs/2608.02580) |
 
-> 📅 **2026 年本方向全部 469 篇 arXiv 论文**（自动分类、按热度排序）见 [2026 年度总览](../digests/2026-annual-arxiv.md#10)，按月份见 [全量月报](../digests/README.md)。上表只收录其中经人工筛选的代表作。
+> 📅 **2026 年本方向全部 451 篇 arXiv 论文**（自动分类、按热度排序）见 [2026 年度总览](../digests/2026-annual-arxiv.md#16)，按月份见 [全量月报](../digests/README.md)。上表只收录其中经人工筛选的代表作。

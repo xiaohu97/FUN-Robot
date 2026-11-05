@@ -12,7 +12,7 @@
 也可以用脚本自动生成这一行（会尝试联网拉取 arXiv 标题）：
 
 ```bash
-python scripts/new_paper.py 2303.04137 --short "Diffusion Policy" --topic 03
+python scripts/new_paper.py 2303.04137 --short "Diffusion Policy" --topic 06
 ```
 
 ## 2. 字段规范

@@ -13,8 +13,8 @@ FUN-Robot/
 │   ├── README.md              #    分类索引 + 自动统计
 │   ├── must-read.md           #    必读清单与阅读路线
 │   ├── 01-vla-foundation-models.md
-│   ├── ...                    #    共 12 个方向，每个文件分「🏛 经典」「🚀 最新进展」
-│   ├── 12-surveys.md
+│   ├── ...                    #    共 18 个方向，每个文件分「🏛 经典」「🚀 最新进展」
+│   ├── 18-surveys.md
 │   └── notes/                 #    📝 精读笔记（一篇一个文件）
 ├── digests/                   # 🗞 全量月报 + 年度总览（脚本生成）+ 专题速递
 ├── data/                      # 📊 arxiv-<年>.csv 全量论文表格

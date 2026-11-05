@@ -1,9 +1,9 @@
-# 05 · 人形机器人（运动、全身控制与遥操作）
+# 11 · 人形机器人（运动、全身控制、移动操作与遥操作）
 
-> 人形机器人的核心难题：高自由度、欠驱动、需要同时“走 + 干活”。当前主流路线是 **“人类动作数据 → 重定向 → 仿真 RL 跟踪 → sim2real”**，并逐步走向**行为基础模型（Behavior Foundation Model）**。
-> 主线：**DeepMimic / AMP（角色动画）→ PHC（大规模动作跟踪）→ 真机 RL 行走 → H2O / HumanPlus（全身遥操作）→ HOVER / ASAP（通用控制器 + 动力学对齐）→ BeyondMimic / GMT（高动态通用跟踪）→ 2026：跨本体全身控制基础模型**
+> 人形机器人的核心难题：高自由度、欠驱动、需要同时“走 + 干活”。主流路线是 **“人类动作数据 → 重定向 → 仿真 RL 跟踪 → sim2real”**，2026 年快速走向**人形移动操作（loco-manipulation）**与大规模动作预训练。
+> 主线：**DeepMimic / AMP → PHC → H2O / HumanPlus（全身遥操作）→ HOVER / ASAP → BeyondMimic / GMT（通用跟踪）→ 2026：Humanoid-GPT（十亿级动作预训练）、Ψ0 / X-WBC（基础模型）、HumanX / HuMI（从人类视频与无机器人示教学交互）**
 
-⭐ = 必读　｜　人形 VLA（GR00T 等）见 [`01`](./01-vla-foundation-models.md)
+⭐ = 必读　｜　条目格式见 [`templates/paper-entry.md`](../templates/paper-entry.md)
 
 ## 🏛 经典论文
 
@@ -37,7 +37,9 @@
 | ⭐ **BeyondMimic** · From Motion Tracking to Versatile Humanoid Control via Guided Diffusion | 2025 · arXiv | 高动态动作跟踪（侧手翻、旋转跳）+ 蒸馏为可引导扩散策略，测试时用代价函数完成导航、避障等任务 | [arXiv](https://arxiv.org/abs/2508.08241) |
 | **OmniRetarget** · Interaction-Preserving Data Generation for Humanoid Whole-Body Loco-Manipulation | 2025 · arXiv | 用交互网格保持人-物-地形关系的重定向，一条示教生成大量可行变体，支撑 30 秒长程技能 | [arXiv](https://arxiv.org/abs/2509.26633) |
 | **WholeBodyVLA** · Towards Unified Latent VLA for Whole-Body Loco-Manipulation Control | 2025 · arXiv | 统一潜在动作的 VLA，把移动与操作放进同一人形全身策略 | [arXiv](https://arxiv.org/abs/2512.11047) |
+| **Deep Whole-body Parkour** | 2026 · arXiv | 把外感知融入全身动作跟踪，人形在不平地形上完成高动态非行走类动作 | [arXiv](https://arxiv.org/abs/2601.07701) |
 | **Hiking in the Wild** · A Scalable Perceptive Parkour Framework for Humanoids | 2026 · arXiv | 端到端感知跑酷框架：深度 + 本体感知直接映射动作，配合落脚安全机制，人形在复杂野外地形以 2.5 m/s 行进 | [arXiv](https://arxiv.org/abs/2601.07718) |
+| **TTT-Parkour** · Rapid Test-Time Training for Perceptive Robot Parkour | 2026 · arXiv | 测试时快速训练，让人形在预训练未见过的复杂地形上完成感知跑酷 | [arXiv](https://arxiv.org/abs/2602.02331) |
 | **HumanX** · Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos | 2026 · arXiv | XGen（从单目视频生成物理可行的交互数据）+ XMimic（交互优先的模仿学习），无需逐任务设计即可从人类视频学到交互技能 | [arXiv](https://arxiv.org/abs/2602.02473) |
 | **HuMI** · Humanoid Manipulation Interface: Humanoid Whole-Body Manipulation from Robot-Free Demonstrations | 2026 · arXiv | 便携式无机器人全身动作采集 + 分层学习，人形学会跪、蹲、抛掷、双臂操作等全身操作任务 | [arXiv](https://arxiv.org/abs/2602.06643) |
 | **TextOp** · Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control | 2026 · arXiv | 实时文本驱动的人形动作生成与控制，执行中可流式修改语言指令并平滑切换动作 | [arXiv](https://arxiv.org/abs/2602.07439) |
@@ -54,6 +56,8 @@
 | **InterEvolve** · Test-Time Evolution of Reward Programs for Humanoid Loco-Manipulation | 2026 · arXiv | 测试时进化奖励程序，复用冻结的物体感知行为基础模型完成从未训练过的人形移动操作任务 | [arXiv](https://arxiv.org/abs/2610.02196) |
 | **Reflex** · Visually Grounded Reactive Humanoid Control | 2026 · arXiv | 三阶段学习视觉驱动的反应式人形控制，仅凭第一视角 RGB-D 接住抛来的箱子（仿真成功率 85.7%） | [arXiv](https://arxiv.org/abs/2610.12772) |
 
-> 综述：A Survey of Behavior Foundation Model（人形全身控制）见 [`12-surveys.md`](./12-surveys.md)。
+## 🔗 相关
 
-> 📅 **2026 年本方向全部 663 篇 arXiv 论文**（自动分类、按热度排序）见 [2026 年度总览](../digests/2026-annual-arxiv.md#05)，按月份见 [全量月报](../digests/README.md)。上表只收录其中经人工筛选的代表作。
+> 人形 VLA（GR00T 等）见 [`01`](./01-vla-foundation-models.md)；行为基础模型综述见 [`18`](./18-surveys.md)。
+
+> 📅 **2026 年本方向全部 626 篇 arXiv 论文**（自动分类、按热度排序）见 [2026 年度总览](../digests/2026-annual-arxiv.md#11)，按月份见 [全量月报](../digests/README.md)。上表只收录其中经人工筛选的代表作。

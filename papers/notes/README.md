@@ -7,7 +7,7 @@
 
 ## 快速创建
 ```bash
-python scripts/new_paper.py 2303.04137 --short "Diffusion Policy" --topic 03 --note
+python scripts/new_paper.py 2303.04137 --short "Diffusion Policy" --topic 06 --note
 ```
 脚本会：① 生成笔记文件并填好元信息；② 在分类表格中插入一行并挂上 `[笔记]` 链接。
 
@@ -15,4 +15,4 @@ python scripts/new_paper.py 2303.04137 --short "Diffusion Policy" --topic 03 --n
 
 | 论文 | 方向 | 推荐度 | 状态 |
 |---|---|---|---|
-| [Diffusion Policy](./2303.04137-diffusion-policy.md)（示例） | 03 模仿学习 | ⭐⭐⭐⭐⭐ | 精读 |
+| [Diffusion Policy](./2303.04137-diffusion-policy.md)（示例） | 06 模仿学习 | ⭐⭐⭐⭐⭐ | 精读 |

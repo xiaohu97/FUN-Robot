@@ -1,6 +1,6 @@
-# 08 · 视觉表征与 3D 场景理解
+# 15 · 视觉表征与 3D 场景理解
 
-> 机器人“看什么、怎么表示”：通用视觉预训练表征（R3M、VC-1）、语义 3D 场景表示（特征场、场景图）、物体位姿估计。
+> 机器人“看什么、怎么表示”：通用视觉预训练表征（R3M、VC-1、V-JEPA）、语义 3D 场景表示（特征场、场景图）、物体位姿估计。
 
 ⭐ = 必读　｜　条目格式见 [`templates/paper-entry.md`](../templates/paper-entry.md)
 
@@ -28,4 +28,4 @@
 | **Lucida** · Parse, Generate, and Place for Composable Real-to-Sim Scene Modeling | 2026 · arXiv | “解析-生成-放置”的可组合 real-to-sim 场景建模流程，大幅提升场景级 3D 检测、位姿估计与重建精度 | [arXiv](https://arxiv.org/abs/2608.30821) |
 | **FAMOS** · Feed-Forward 3D Articulation Modeling from Sparse Observations | 2026 · arXiv | 前馈模型从稀疏、无序的局部点云直接预测可动部件分割与关节参数，服务铰接物体操作 | [arXiv](https://arxiv.org/abs/2609.20817) |
 
-> 📅 **2026 年本方向全部 442 篇 arXiv 论文**（自动分类、按热度排序）见 [2026 年度总览](../digests/2026-annual-arxiv.md#08)，按月份见 [全量月报](../digests/README.md)。上表只收录其中经人工筛选的代表作。
+> 📅 **2026 年本方向全部 423 篇 arXiv 论文**（自动分类、按热度排序）见 [2026 年度总览](../digests/2026-annual-arxiv.md#15)，按月份见 [全量月报](../digests/README.md)。上表只收录其中经人工筛选的代表作。

@@ -1,6 +1,8 @@
-# 06 · 操作、抓取与灵巧手
+# 12 · 操作、抓取与灵巧手
 
-> 从“抓得起来”到“用得巧”：抓取检测 → 语言条件操作 → 3D 表征策略 → 多指灵巧手（RL + sim2real、触觉、从人类视频学习）。
+> 从“抓得起来”到“用得巧”：抓取检测 → 语言条件操作 → 3D 表征策略 → 多指灵巧手（RL + sim2real、从人类视频学习）。
+
+> 触觉相关工作已拆分到 [`13 触觉与接触感知`](./13-tactile.md)。
 
 ⭐ = 必读　｜　条目格式见 [`templates/paper-entry.md`](../templates/paper-entry.md)
 
@@ -31,21 +33,14 @@
 | **Act3D** · 3D Feature Field Transformers for Multi-Task Robotic Manipulation | 2023 · CoRL'23 | 自适应 3D 特征场采样定位末端位姿，提升高精度多任务操作 | [arXiv](https://arxiv.org/abs/2306.17817) |
 | ⭐ **3D Diffuser Actor** · Policy Diffusion with 3D Scene Representations | 2024 · CoRL'24 | 3D 场景 tokens + 扩散动作生成，在 RLBench / CALVIN 上大幅领先 | [arXiv](https://arxiv.org/abs/2402.10885) · [代码](https://github.com/nickgkan/3d_diffuser_actor) |
 | ⭐ **DexterityGen** · Foundation Controller for Unprecedented Dexterity | 2025 · arXiv | RL 预训练大规模灵巧运动原语，作为“基础控制器”接收遥操作/策略的粗指令，稳定性提升 10~100 倍 | [arXiv](https://arxiv.org/abs/2502.04307) |
-| **Visuo-Tactile World Models** | 2026 · arXiv | 多任务视触觉世界模型，用触觉推理刻画接触物理，想象轨迹更符合物理，真机零样本成功率最高提升 35% | [arXiv](https://arxiv.org/abs/2602.06001) |
 | **EgoScale** · Scaling Dexterous Manipulation with Diverse Egocentric Human Data | 2026 · arXiv | 在 2 万多小时带动作标注的第一视角人类视频上训练灵巧操作 VLA，发现人类数据规模与性能的对数线性规律，22 自由度灵巧手成功率提升 54% | [arXiv](https://arxiv.org/abs/2602.16710) |
 | **SimToolReal** · An Object-Centric Policy for Zero-Shot Dexterous Tool Manipulation | 2026 · arXiv | 仿真中程序化生成大量工具状物体，训练单一“把物体转到任意目标位姿”的 RL 策略，零样本完成灵巧工具操作 | [arXiv](https://arxiv.org/abs/2602.16863) |
-| **Grasp, Slide, Roll** · Comparative Analysis of Contact Modes for Tactile-Based Shape Reconstruction | 2026 · arXiv | 比较抓放、指尖滑动、掌心滚动三种触觉接触模式，滑动/滚动少用约 34% 接触完成纯触觉形状重建 | [arXiv](https://arxiv.org/abs/2602.23206) |
 | **SPARR** · Simulation-based Policies with Asymmetric Real-world Residuals for Assembly | 2026 · ICRA'26 | 仿真状态基策略 + 真机视觉残差策略，无需示教在装配任务上达到 95~100% 成功率 | [arXiv](https://arxiv.org/abs/2602.23253) · [主页](https://research.nvidia.com/labs/srl/projects/sparr/) |
-| **TacVLA** · Contact-Aware Tactile Fusion for Robust Vision-Language-Action Manipulation | 2026 · arXiv | 接触门控的触觉融合：只在检测到接触时激活触觉 token，提升 VLA 的精细接触操作 | [arXiv](https://arxiv.org/abs/2603.12665) |
-| **OmniVTA** · Visuo-Tactile World Modeling for Contact-Rich Robotic Manipulation | 2026 · arXiv | 2.1 万条视觉-触觉-动作轨迹数据集 + 视触觉世界模型，用预测式接触建模和高频触觉闭环完成接触丰富操作 | [arXiv](https://arxiv.org/abs/2603.19201) |
 | **UniDex** · A Robot Foundation Suite for Universal Dexterous Hand Control from Egocentric Human Videos | 2026 · CVPR'26 | 从第一视角人类视频构建覆盖 8 种灵巧手、5 万条轨迹的数据集 + 统一灵巧手 VLA + 人类数据采集方案 | [arXiv](https://arxiv.org/abs/2603.22264) |
 | **HANDFUL** · Sequential Grasp-Conditioned Dexterous Manipulation with Resource Awareness | 2026 · arXiv | 研究“手里握着一个物体的同时再做另一个操作”的序列灵巧操作，LEAP 手真机验证 | [arXiv](https://arxiv.org/abs/2604.25126) |
-| **Dream-Tac** · A Unified Tactile World Action Model for Contact-Rich Robot Manipulation | 2026 · arXiv | 联合建模动作、未来视觉与触觉动态的触觉世界动作模型，接触门控融合 + 推理加速 | [arXiv](https://arxiv.org/abs/2606.08737) |
 | **GAM** · Geometric Action Model for Robot Policy Learning | 2026 · arXiv | Geometric Action Model：直接复用预训练几何基础模型作为感知、时序预测与动作解码的共享底座 | [arXiv](https://arxiv.org/abs/2606.17046) |
-| **N0-VTLA** · Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens | 2026 · arXiv | 视觉-触觉-语言-动作基础模型：潜在触觉 token、分阶段触觉通路接入，以及基于部署数据的优势条件离线改进 | [arXiv](https://arxiv.org/abs/2607.23782) |
-| **PointWAM** · 3D World Action Modeling for Dexterous Robotic Manipulation | 2026 · arXiv | 把世界分解为“场景 + 手”并联合预测 3D 点轨迹的世界动作模型，可直接用人类视频预训练，DexJoCo 提升 56.9 个点 | [arXiv](https://arxiv.org/abs/2610.02840) |
 | **Human2Dex** · Dexterous Robot Learning from Wrist-Centric Human Demonstrations | 2026 · arXiv | 人与机器人共享 21 点手部表示，把腕部视角的人类示教重定向到各种灵巧手 | [arXiv](https://arxiv.org/abs/2610.13119) |
 | **DONIC** · Generalist Dexterous Bimanual Tracking Control from Human Demonstrations | 2026 · arXiv | 首个跨操作类别、跨人类动作来源联合训练的通用双手灵巧跟踪控制器，并发布 BiHOI 双手交互数据集 | [arXiv](https://arxiv.org/abs/2610.29997) |
 | **HandMimicX** · Learning Human-Like Dexterous Manipulation via an Object-Centric Policy from Egocentric Videos | 2026 · arXiv | 以物体运动（而非手部轨迹）定义 RL 目标，从第一视角人类视频学习灵巧技能 | [arXiv](https://arxiv.org/abs/2610.41336) |
 
-> 📅 **2026 年本方向全部 1895 篇 arXiv 论文**（自动分类、按热度排序）见 [2026 年度总览](../digests/2026-annual-arxiv.md#06)，按月份见 [全量月报](../digests/README.md)。上表只收录其中经人工筛选的代表作。
+> 📅 **2026 年本方向全部 1428 篇 arXiv 论文**（自动分类、按热度排序）见 [2026 年度总览](../digests/2026-annual-arxiv.md#12)，按月份见 [全量月报](../digests/README.md)。上表只收录其中经人工筛选的代表作。

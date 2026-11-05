@@ -1,7 +1,7 @@
-# 11 · 仿真平台、Sim2Real 与评测基准
+# 17 · 仿真平台、Sim2Real 与评测基准
 
-> 仿真提供“无限数据 + 安全试错”，Sim2Real 解决“仿真学的能不能在真机用”，基准让不同方法可比。
-> 基准的评测指标与 SOTA 汇总见 [`benchmarks/README.md`](../benchmarks/README.md)；仿真器/框架的上手指南见 [`projects/README.md`](../projects/README.md)。
+> 仿真提供“无限数据 + 安全试错”，Sim2Real 解决“仿真学的能不能在真机用”，基准让不同方法可比。2026 年出现了大量统一“仿真 + 真机”的评测与公开排行榜（RoboDojo 等）。
+> 基准指标汇总见 [`benchmarks/README.md`](../benchmarks/README.md)；仿真器上手见 [`projects/README.md`](../projects/README.md)。
 
 ⭐ = 必读　｜　条目格式见 [`templates/paper-entry.md`](../templates/paper-entry.md)
 
@@ -32,16 +32,13 @@
 | ⭐ **Isaac Lab** · A GPU-Accelerated Simulation Framework for Multi-Modal Robot Learning | 2025 · arXiv | Isaac Gym 继任者：GPU 并行物理 + RTX 渲染 + 执行器模型 + 传感器仿真 + 数据采集，覆盖全身控制到灵巧操作 | [arXiv](https://arxiv.org/abs/2511.04831) · [代码](https://github.com/isaac-sim/IsaacLab) |
 | **mjlab** · A Lightweight Framework for GPU-Accelerated Robot Learning | 2026 · arXiv | 轻量开源 GPU 机器人学习框架：Isaac Lab 式模块化 API + MuJoCo Warp 物理，一行命令安装 | [arXiv](https://arxiv.org/abs/2601.22074) |
 | **WorldArena** · A Unified Benchmark for Evaluating Perception and Functional Utility of Embodied World Models | 2026 · arXiv | 统一评测具身世界模型的感知质量与功能效用，提出 EWMScore，揭示“画面好 ≠ 任务能力强” | [arXiv](https://arxiv.org/abs/2602.08971) |
-| **UniVTAC** · A Unified Simulation Platform for Visuo-Tactile Manipulation Data Generation, Learning, and Benchmarking | 2026 · arXiv | 支持三种视触觉传感器的仿真数据合成平台，配套视触觉编码器与基准 | [arXiv](https://arxiv.org/abs/2602.10093) |
 | **MolmoSpaces** · A Large-Scale Open Ecosystem for Robot Navigation and Manipulation | 2026 · arXiv | 大规模开放机器人导航与操作仿真生态 + 8 任务基准，仿真与真机成绩高度相关（R = 0.96） | [arXiv](https://arxiv.org/abs/2602.11337) |
-| **RMBench** · Memory-Dependent Robotic Manipulation Benchmark with Insights into Policy Design | 2026 · arXiv | 9 个不同记忆复杂度的操作任务基准 + 显式记忆模块化策略 Mem-0，分析策略记忆能力的设计要点 | [arXiv](https://arxiv.org/abs/2603.01229) |
 | **RoboCasa365** · A Large-Scale Simulation Framework for Training and Benchmarking Generalist Robots | 2026 · ICLR'26 | 大规模家庭移动操作仿真框架与基准，支持多任务学习、基础模型训练与终身学习等评测设置 | [arXiv](https://arxiv.org/abs/2603.04356) |
 | **Interactive World Simulator for Robot Policy Training and Evaluation** | 2026 · arXiv | 可交互的学习式世界模拟器，用于刚体、可变形物体、堆叠物等任务的策略训练与评测，结果与真机一致 | [arXiv](https://arxiv.org/abs/2603.08546) |
 | **RoboLab** · A High-Fidelity Simulation Benchmark for Analysis of Task Generalist Policies | 2026 · arXiv | 高保真仿真基准，研究仿真行为能在多大程度上解释通用策略的真机表现，以及哪些因素影响最大 | [arXiv](https://arxiv.org/abs/2604.09860) |
-| **RoboMemArena** · A Comprehensive and Challenging Robotic Memory Benchmark | 2026 · arXiv | 26 个任务的大规模机器人记忆基准，并提出带记忆库与预测编码的双系统 VLA（PrediMem） | [arXiv](https://arxiv.org/abs/2605.10921) |
 | **DexJoCo** · A Benchmark and Toolkit for Task-Oriented Dexterous Manipulation on MuJoCo | 2026 · arXiv | 基于 MuJoCo 的任务导向灵巧操作基准与工具包：11 个任务覆盖工具使用、双手协调、长程与推理，含 1100 条人类示教 | [arXiv](https://arxiv.org/abs/2605.16257) |
 | ⭐ **RoboDojo** · A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies | 2026 · arXiv | 统一的仿真 + 真机基准与公开排行榜，集成 30 个通用操作策略进行系统评测，2026 年下半年被大量论文采用 | [arXiv](https://arxiv.org/abs/2607.04434) |
 | **RobotWorld** · Benchmarking Multimodal Agents for Robot Use Across Diverse Tasks and Embodiments | 2026 · arXiv | 面向“机器人使用”的多模态智能体仿真测试平台，覆盖多种任务与本体，分析执行轨迹中的能力与失败模式 | [arXiv](https://arxiv.org/abs/2610.10409) |
 | **HexaShell** · A Universal Harness for Robot Coding Agents in Simulation and the Real World | 2026 · arXiv | 给编程智能体一个极薄的命令行接口来控制机器人（仿真与真机），研究编程智能体操控机器人能走多远 | [arXiv](https://arxiv.org/abs/2610.23479) |
 
-> 📅 **2026 年本方向全部 484 篇 arXiv 论文**（自动分类、按热度排序）见 [2026 年度总览](../digests/2026-annual-arxiv.md#11)，按月份见 [全量月报](../digests/README.md)。上表只收录其中经人工筛选的代表作。
+> 📅 **2026 年本方向全部 418 篇 arXiv 论文**（自动分类、按热度排序）见 [2026 年度总览](../digests/2026-annual-arxiv.md#17)，按月份见 [全量月报](../digests/README.md)。上表只收录其中经人工筛选的代表作。
