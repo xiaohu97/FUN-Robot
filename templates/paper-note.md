@@ -7,7 +7,7 @@ venue: "CoRL 2025 / arXiv"
 year: 2026
 authors: "第一作者 et al."
 affiliation: "机构"
-topic: "03-imitation-learning"  # 对应 papers/ 下的分类文件名
+topic: "06-imitation-learning"  # 对应 papers/ 下的分类文件名
 tags: [VLA, manipulation, real-world]   # 从 taxonomy.md 的标签表里选
 links:
   paper: "https://arxiv.org/abs/XXXX.XXXXX"

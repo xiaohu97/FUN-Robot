@@ -11,7 +11,7 @@
         --code https://github.com/Physical-Intelligence/openpi --note
 
     # 放进「经典论文」表格、加 ⭐
-    python scripts/new_paper.py 2303.04137 --short "Diffusion Policy" --topic 03 --section classic --star
+    python scripts/new_paper.py 2303.04137 --short "Diffusion Policy" --topic 06 --section classic --star
 
 参数说明见 `--help`。只依赖 Python 标准库。
 """
@@ -107,7 +107,7 @@ def make_note(a: argparse.Namespace, topic: Path | None) -> Path:
         ('venue: "CoRL 2025 / arXiv"', f'venue: "{a.venue}"'),
         ("year: 2026", f"year: {a.year}"),
         ('authors: "第一作者 et al."', f'authors: "{a.authors}"'),
-        ('topic: "03-imitation-learning"', f'topic: "{topic.stem if topic else ""}"'),
+        ('topic: "06-imitation-learning"', f'topic: "{topic.stem if topic else ""}"'),
         ('paper: "https://arxiv.org/abs/XXXX.XXXXX"', f'paper: "https://arxiv.org/abs/{a.arxiv}"' if a.arxiv else f'paper: "{a.url or ""}"'),
         ('code: ""', f'code: "{a.code or ""}"'),
         ('project: ""', f'project: "{a.project or ""}"'),

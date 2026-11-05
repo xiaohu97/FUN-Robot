@@ -1,7 +1,9 @@
 # 01 · VLA 与机器人基础模型
 
-> Vision-Language-Action（VLA）：把视觉、语言和动作放进同一个大模型，目标是做出“一个模型、多种任务、多种机器人”的通用策略。
-> 主线：**Gato / RT-1（多任务 Transformer）→ RT-2（VLM 直接输出动作）→ Open X-Embodiment（跨本体数据）→ OpenVLA / π0（开源 + 连续动作）→ π0.5 / GR00T / Gemini Robotics（开放世界泛化）→ 2026：RL 后训练、可引导、世界动作模型**
+> Vision-Language-Action（VLA）：把视觉、语言和动作放进同一个大模型，目标是“一个模型、多种任务、多种机器人”的通用策略。
+> 主线：**Gato / RT-1（多任务 Transformer）→ RT-2（VLM 直接输出动作）→ Open X-Embodiment（跨本体数据）→ OpenVLA / π0（开源 + 连续动作）→ π0.5 / GR00T / Gemini Robotics（开放世界泛化）→ 2026：Qwen-VLA / π0.7 等统一多任务多本体、可引导的 VLA**
+
+> 相关新方向：VLA 的记忆见 [`09`](./09-memory-long-horizon.md)，RL 后训练见 [`07`](./07-rl-post-training.md)，触觉 VLA 见 [`13`](./13-tactile.md)，世界动作模型见 [`02`](./02-world-action-models.md)。
 
 ⭐ = 必读　｜　条目格式见 [`templates/paper-entry.md`](../templates/paper-entry.md)
 
@@ -10,8 +12,8 @@
 | 论文 | 年份 · 会议 | 核心贡献 | 资源 |
 |---|---|---|---|
 | ⭐ **Gato** · A Generalist Agent | 2022 · TMLR | 单个 Transformer 同时玩游戏、聊天、控制机械臂，“通才智能体”的早期样板 | [arXiv](https://arxiv.org/abs/2205.06175) |
-| ⭐ **RT-1** · Robotics Transformer for Real-World Control at Scale | 2022 · RSS'23 | 13 万条真机示教、700+ 任务训练的机器人 Transformer，证明大规模多任务数据带来泛化 | [arXiv](https://arxiv.org/abs/2212.06817) · [代码](https://github.com/google-research/robotics_transformer) |
 | **VIMA** · General Robot Manipulation with Multimodal Prompts | 2022 · ICML'23 | 用图文交错的多模态 prompt 统一描述各种操作任务，并给出对应基准 | [arXiv](https://arxiv.org/abs/2210.03094) · [代码](https://github.com/vimalabs/VIMA) |
+| ⭐ **RT-1** · Robotics Transformer for Real-World Control at Scale | 2022 · RSS'23 | 13 万条真机示教、700+ 任务训练的机器人 Transformer，证明大规模多任务数据带来泛化 | [arXiv](https://arxiv.org/abs/2212.06817) · [代码](https://github.com/google-research/robotics_transformer) |
 | **PaLM-E** · An Embodied Multimodal Language Model | 2023 · ICML'23 | 把图像/状态编码注入 562B 大语言模型，构成能做具身规划的多模态 LLM | [arXiv](https://arxiv.org/abs/2303.03378) |
 | **RoboCat** · A Self-Improving Generalist Agent for Robotic Manipulation | 2023 · TMLR | 新任务只需少量示教 → 自己生成数据 → 再训练，形成自我改进循环 | [arXiv](https://arxiv.org/abs/2306.11706) |
 | ⭐ **RT-2** · Vision-Language-Action Models Transfer Web Knowledge to Robotic Control | 2023 · CoRL'23 | 把动作离散成文本 token 与 VLM 联合微调，正式提出 VLA 概念，网络知识可迁移到动作 | [arXiv](https://arxiv.org/abs/2307.15818) |
@@ -40,14 +42,25 @@
 | **Knowledge Insulating VLA** · Train Fast, Run Fast, Generalize Better | 2025 · arXiv | 训练连续动作专家时阻断梯度回传 VLM，既保留语言知识又加速训练 | [arXiv](https://arxiv.org/abs/2505.23705) |
 | **SmolVLA** · A VLA Model for Affordable and Efficient Robotics | 2025 · arXiv | 约 450M 参数的小型开源 VLA，用社区 LeRobot 数据训练，消费级 GPU 可跑 | [arXiv](https://arxiv.org/abs/2506.01844) · [代码](https://github.com/huggingface/lerobot) |
 | **Gemini Robotics 1.5** · Pushing the Frontier of Generalist Robots with Advanced Embodied Reasoning, Thinking, and Motion Transfer | 2025 · arXiv | Motion Transfer 机制吸收多本体数据；动作与多级语言推理交错（先思考再行动）；ER 1.5 刷新具身推理 SOTA | [arXiv](https://arxiv.org/abs/2510.03342) |
-| ⭐ **π\*0.6** · a VLA That Learns From Experience | 2025 · arXiv | RECAP：融合示教、自主经验与人工纠正的优势条件 RL，难任务吞吐翻倍、失败率约减半 | [arXiv](https://arxiv.org/abs/2511.14759) · [博客](https://pi.website/blog/pistar06) |
-| **GR00T N1.6** · 开源人形 VLA（无论文） | 2026 · 模型发布 | 3B 参数，VLM + 扩散 Transformer 动作头，CES 2026 发布并开放权重与微调脚本 | [模型](https://huggingface.co/nvidia/GR00T-N1.6-3B) · [代码](https://github.com/NVIDIA/Isaac-GR00T) |
+| **Being-H0.5** · Scaling Human-Centric Robot Learning for Cross-Embodiment Generalization | 2026 · arXiv | 把人类交互轨迹当作物理交互的“通用母语”，用 3.5 万小时多模态数据（UniHand-2.0）预训练跨本体 VLA | [arXiv](https://arxiv.org/abs/2601.12993) |
 | **LingBot-VLA** · A Pragmatic VLA Foundation Model | 2026 · arXiv | 面向实际部署的 VLA 基础模型，强调工程可用性 | [arXiv](https://arxiv.org/abs/2601.18692) |
+| **DynamicVLA** · A Vision-Language-Action Model for Dynamic Object Manipulation | 2026 · NeurIPS'26 | 面向运动物体操作的低延迟 VLA，并构建 20 万条合成 + 免遥操作真机采集的动态操作基准 DOM | [arXiv](https://arxiv.org/abs/2601.22153) |
+| **Green-VLA** · Staged Vision-Language-Action Model for Generalist Robots | 2026 · arXiv | 五阶段课程（VLM → 多模态对齐 → 多本体预训练 → 本体适配 → RL 对齐）+ 3000 小时数据，单一策略控制人形、移动操作臂与固定臂 | [arXiv](https://arxiv.org/abs/2602.00919) |
+| **ABot-M0** · VLA Foundation Model for Robotic Manipulation with Action Manifold Learning | 2026 · arXiv | 把 6 个公开数据集清洗统一为 600 万条轨迹 / 9500 小时的 UniACT 数据集，结合动作流形学习预训练跨形态操作基础模型 | [arXiv](https://arxiv.org/abs/2602.11236) |
+| **StarVLA** · A Lego-like Codebase for Vision-Language-Action Model Developing | 2026 · arXiv | 积木式开源 VLA 代码框架，统一复现主流 VLA 方法并快速搭建新模型 | [arXiv](https://arxiv.org/abs/2604.05014) |
 | ⭐ **π0.7** · a Steerable Generalist Robotic Foundation Model with Emergent Capabilities | 2026 · arXiv | 以子任务、元数据、子目标图像、控制模式等丰富上下文为条件训练，可吸收混合质量数据并被“引导”，出现组合泛化与零样本跨本体迁移 | [arXiv](https://arxiv.org/abs/2604.15483) |
+| **RLDX-1 Technical Report** | 2026 · arXiv | 多流动作 Transformer（MSAT）融合异构模态的灵巧操作通用策略，仿真与真机均超过 π0.5、GR00T N1.6 | [arXiv](https://arxiv.org/abs/2605.03269) |
+| **Qwen-VLA** · Unifying Vision-Language-Action Modeling across Tasks, Environments, and Robot Embodiments | 2026 · arXiv | 在 Qwen 视觉语言模型上接 DiT 动作解码器，用一个模型统一操作、导航等多任务、多环境、多本体决策 | [arXiv](https://arxiv.org/abs/2605.30280) |
+| **Qwen-RobotManip Technical Report** · Alignment Unlocks Scale for Robotic Manipulation Foundation Models | 2026 · arXiv | 基于 Qwen-VL 的操作 VLA 基础模型，强调异构数据对齐带来的规模化，分布外设置全面超过 π0.5，RoboChallenge 第一 | [arXiv](https://arxiv.org/abs/2606.17846) |
 | **Xiaomi-Robotics-1** · Scaling VLA Models with over 100K Hours of Real-World Trajectories | 2026 · arXiv | 用 10 万小时以上真机轨迹扩展 VLA 规模，探索真机数据的 scaling | [arXiv](https://arxiv.org/abs/2607.15330) |
 | **τ0-VLA** · a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation | 2026 · arXiv | 分层基础模型，用世界模型在推理时评估并选择高层子任务（test-time compute 进入机器人） | [arXiv](https://arxiv.org/abs/2608.16885) |
+| **GroundingPI** · A Grounding Foundation Model towards Physical Intelligence with Visual Primitives | 2026 · arXiv | 4B 视觉定位基础模型以量化坐标输出点和框，作为 VLA 视觉骨干在 RoboTwin 2.0 分布外设置中全面领先 | [arXiv](https://arxiv.org/abs/2609.39601) |
+| **PDRVLA** · A Vision-Language-Action Model with Physical Dynamics Representations | 2026 · arXiv | 轻量物理动力学模块从视觉语言特征中提取“物理 token”来条件化动作，无需在线生成视频；LIBERO 99.3% | [arXiv](https://arxiv.org/abs/2610.37381) |
+| **GR00T N1.6** · 开源人形 VLA（无论文） | 2026 · 模型发布 | 3B 参数，VLM + 扩散 Transformer 动作头，CES 2026 发布并开放权重与微调脚本 | [模型](https://huggingface.co/nvidia/GR00T-N1.6-3B) · [代码](https://github.com/NVIDIA/Isaac-GR00T) |
 
 ## 🔗 相关
+
 - 上手项目：[openpi](https://github.com/Physical-Intelligence/openpi) · [LeRobot](https://github.com/huggingface/lerobot) · [Isaac-GR00T](https://github.com/NVIDIA/Isaac-GR00T)
-- 评测：LIBERO / SIMPLER / CALVIN → 见 [`11-simulation-benchmarks.md`](./11-simulation-benchmarks.md)
-- 世界动作模型（WAM）→ 见 [`07-world-models.md`](./07-world-models.md)
+- 评测：LIBERO / SIMPLER / RoboDojo → 见 [`17`](./17-simulation-benchmarks.md)
+
+> 📅 **2026 年本方向全部 1260 篇 arXiv 论文**（自动分类、按热度排序）见 [2026 年度总览](../digests/2026-annual-arxiv.md#01)，按月份见 [全量月报](../digests/README.md)。上表只收录其中经人工筛选的代表作。
