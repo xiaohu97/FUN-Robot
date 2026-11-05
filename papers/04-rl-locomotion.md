@@ -25,5 +25,16 @@
 | **Robot Parkour Learning** | 2023 · CoRL'23 | 软约束到硬约束的 RL 课程 + 蒸馏，低成本四足学会攀爬、跳跃、钻洞 | [arXiv](https://arxiv.org/abs/2309.05665) |
 | ⭐ **Extreme Parkour** · Extreme Parkour with Legged Robots | 2023 · ICRA'24 | 单个前视深度相机端到端策略，低成本四足跳过 2 倍身高障碍 | [arXiv](https://arxiv.org/abs/2309.14341) |
 | ⭐ **HIL-SERL** · Precise and Dexterous Robotic Manipulation via Human-in-the-Loop RL | 2024 · Science Robotics | 示教 + 人工纠正 + 高效离策略 RL，1~2.5 小时真机训练达到接近 100% 成功率 | [arXiv](https://arxiv.org/abs/2410.21845) |
+| **Neural Map Encoding Locomotion** · Agile and Generalized Legged Locomotion via Attention-Based Neural Map Encoding | 2026 · T-RO | 注意力式地形地图编码器 + 带不确定性的学习式建图，统一 RL 框架实现敏捷且可泛化的足式运动 | [arXiv](https://arxiv.org/abs/2601.08485) |
+| **QAM** · Q-learning with Adjoint Matching | 2026 · arXiv | 借用生成模型中的 adjoint matching 技术，稳定地用 Q 函数优化扩散/flow 策略 | [arXiv](https://arxiv.org/abs/2601.14234) |
+| **USER** · A Unified and Extensible System for Real-World Online Policy Learning in Embodied AI | 2026 · RSS'26 | 面向真实世界在线策略学习的统一系统：硬件抽象层、云边协同训练、多机器人与长时异步训练 | [arXiv](https://arxiv.org/abs/2602.07837) |
+| **DICE-RL** · From Prior to Pro: Efficient Skill Mastery via Distribution Contractive RL Finetuning | 2026 · arXiv | 把 RL 当作“分布收缩”算子：残差离策略 RL 精调预训练扩散/flow 策略，从像素学会长程操作技能 | [arXiv](https://arxiv.org/abs/2603.10263) |
+| **OmniReset** · Emergent Dexterity via Diverse Resets and Large-Scale Reinforcement Learning | 2026 · arXiv | 多样化重置 + 大规模在线 RL，单一奖励、固定超参、无课程无示教即可解决一大类灵巧操作任务 | [arXiv](https://arxiv.org/abs/2603.15789) |
+| **FlashSAC** · Fast and Stable Off-Policy Reinforcement Learning for High-Dimensional Robot Control | 2026 · RSS'26 | 快速稳定的离策略 SAC 变体，在 10 个仿真器 60+ 任务上优于 PPO，人形 sim2real 训练从数小时降到分钟级 | [arXiv](https://arxiv.org/abs/2604.04539) |
+| **ViVa** · A Video-Generative Value Model for Robot Reinforcement Learning | 2026 · arXiv | 把预训练视频生成模型改造成价值模型（联合预测未来本体状态与价值），接入 RECAP 提升真机 RL | [arXiv](https://arxiv.org/abs/2604.08168) |
+| **TRQAM** · Trust Region Q Adjoint Matching | 2026 · NeurIPS'26 | 在 QAM 上加入路径空间 KL 信赖域，避免评论家误差被放大，稳定地离策略精调预训练策略 | [arXiv](https://arxiv.org/abs/2605.27079) |
+| **ACCRUE** · Continual Off-Policy Reinforcement Learning for Robot Foundation Models | 2026 · arXiv | 面向机器人基础模型的持续离策略 RL：学新任务几乎不遗忘，真机训练时间减少 31%~68.5% | [arXiv](https://arxiv.org/abs/2610.18596) |
 
 > 2026 年 1-2 月 arXiv 中大量人形运动控制论文的逐篇清单见 [`digests/2026-01-02-arxiv-humanoid.md`](../digests/2026-01-02-arxiv-humanoid.md)。
+
+> 📅 **2026 年本方向全部 890 篇 arXiv 论文**（自动分类、按热度排序）见 [2026 年度总览](../digests/2026-annual-arxiv.md#04)，按月份见 [全量月报](../digests/README.md)。上表只收录其中经人工筛选的代表作。

@@ -39,6 +39,7 @@
 | 8 | [π\*0.6 (RECAP)](https://arxiv.org/abs/2511.14759) | VLA 如何用真机经验做 RL 后训练？ |
 | 9 | [π0.7](https://arxiv.org/abs/2604.15483) | 丰富上下文条件如何让模型“可引导”并吸收混合质量数据？ |
 | 10 | [DreamZero](https://arxiv.org/abs/2602.15922) | 世界动作模型（WAM）与 VLA 的区别 |
+| 11 | [MolmoAct2](https://arxiv.org/abs/2605.02881) · [CaP-X](https://arxiv.org/abs/2603.22435) | 2026 下半年的两条新路线：完全开源的动作推理模型 vs. 大模型智能体直接写代码控制机器人 |
 
 ## 路线 C · 人形机器人与运动控制
 
@@ -76,4 +77,6 @@
 | 3 | [Cosmos](https://arxiv.org/abs/2501.03575) | 世界基础模型平台由哪些部件组成？ |
 | 4 | [V-JEPA 2](https://arxiv.org/abs/2506.09985) | 不生成像素的预测式世界模型如何规划？ |
 | 5 | [DreamGen](https://arxiv.org/abs/2505.12705) | 用世界模型合成训练数据 |
-| 6 | [From World Models to World Action Models](https://arxiv.org/abs/2607.00836) | WAM 的四种范式 |
+| 6 | [DreamZero](https://arxiv.org/abs/2602.15922) → [Fast-WAM](https://arxiv.org/abs/2603.16666) | WAM 作为零样本策略；测试时“想象未来”到底有没有必要？ |
+| 7 | [Cosmos Policy](https://arxiv.org/abs/2601.16163) · [LingBot-VA](https://arxiv.org/abs/2601.21998) | 如何把预训练视频模型直接变成机器人策略？ |
+| 8 | [From World Models to World Action Models](https://arxiv.org/abs/2607.00836) | WAM 的四种范式 |

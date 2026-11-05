@@ -18,3 +18,17 @@
 | ⭐ **From World Models to World Action Models** · A Concise Tutorial for Robotics | 2026 | WAM 入门教程：先想象再执行、视频特征条件、视频-动作联合建模、辅助视频预测四种范式 | [arXiv](https://arxiv.org/abs/2607.00836) |
 | **A Comprehensive Survey and Systematic Real-World Evaluation of Embodied VLN** | 2026 | 视觉语言导航综述 + 真机系统评测 | [arXiv](https://arxiv.org/abs/2607.09792) |
 | **World-Action Models for Robot Learning and Control** · A Survey | 2026 | 世界动作模型综述 | [arXiv](https://arxiv.org/abs/2609.16074) |
+| **Robotic Video World Models** · A Survey of Applications, Research Challenges, Future Directions | 2026 · arXiv | 机器人视频世界模型综述：应用、研究挑战与未来方向 | [arXiv](https://arxiv.org/abs/2601.07823) |
+| **Embodied Foundation Models at the Edge: A Survey of Deployment Constraints and Mitigation Strategies** | 2026 · arXiv | 具身基础模型在边缘设备部署的约束与缓解策略综述（量化、蒸馏、异步推理等） | [arXiv](https://arxiv.org/abs/2603.16952) |
+| **Vision-Language-Action in Robotics** · A Survey of Datasets, Benchmarks, and Data Engines | 2026 · arXiv | 从数据视角梳理 VLA：数据集、基准与数据引擎 | [arXiv](https://arxiv.org/abs/2604.23001) |
+| **Robot Learning from Human Videos** · A Survey | 2026 · arXiv | 从人类视频学习机器人技能的系统综述 | [arXiv](https://arxiv.org/abs/2604.27621) |
+| **World Action Models** · The Next Frontier in Embodied AI | 2026 · arXiv | 首篇系统梳理世界动作模型（WAM）的综述：形式化定义、架构范式与权衡、开放问题 | [arXiv](https://arxiv.org/abs/2605.12090) |
+| **From Human Videos to Robot Manipulation: A Survey on Scalable Vision-Language-Action Learning with Human-Centric Data** | 2026 · IJCAI'26 | 以人为中心数据驱动的可扩展 VLA 学习综述 | [arXiv](https://arxiv.org/abs/2606.00054) |
+| **3D Scene Graphs** · Open Challenges and Future Directions | 2026 · arXiv | 3D 场景图综述（Annual Review）：统一定义、构建方法、下游应用与开放问题 | [arXiv](https://arxiv.org/abs/2606.19383) |
+| **World Action Models** · A Survey | 2026 · arXiv | 世界动作模型综述（57 页），覆盖架构、训练与评测 | [arXiv](https://arxiv.org/abs/2606.20781) |
+| **GigaWorld-1** · A Roadmap to Build World Models for Robot Policy Evaluation | 2026 · arXiv | 构建用于机器人策略评测的世界模型的路线图 | [arXiv](https://arxiv.org/abs/2607.02642) |
+| **Progress Reward Modeling for Robotic Learning** · A Comprehensive Survey | 2026 · arXiv | 机器人学习中“任务进度奖励模型”的全面综述 | [arXiv](https://arxiv.org/abs/2607.21655) |
+| **Data Pyramid for Embodied Manipulation: A Survey** | 2026 · arXiv | 具身操作数据金字塔综述：网络数据、人类视频、仿真、真机数据如何分层使用 | [arXiv](https://arxiv.org/abs/2607.24744) |
+| **In-Context Learning for Robots** · Methods and Applications | 2026 · arXiv | 机器人上下文学习综述：上下文条件策略、几何示教迁移、世界模型控制、技能/智能体执行四类方法 | [arXiv](https://arxiv.org/abs/2609.36012) |
+
+> 📅 **2026 年本方向全部 109 篇 arXiv 论文**（自动分类、按热度排序）见 [2026 年度总览](../digests/2026-annual-arxiv.md#12)，按月份见 [全量月报](../digests/README.md)。上表只收录其中经人工筛选的代表作。

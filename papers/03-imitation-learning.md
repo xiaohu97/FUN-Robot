@@ -29,5 +29,15 @@
 | **Consistency Policy** · Accelerated Visuomotor Policies via Consistency Distillation | 2024 · RSS'24 | 一致性蒸馏把扩散策略推理加速一个数量级，适合算力受限的实时控制 | [arXiv](https://arxiv.org/abs/2405.07503) |
 | **DPPO** · Diffusion Policy Policy Optimization | 2024 · ICLR'25 | 用策略梯度直接微调预训练扩散策略，打通“模仿预训练 → RL 精调” | [arXiv](https://arxiv.org/abs/2409.00588) |
 | ⭐ **Data Scaling Laws in Imitation Learning for Robotic Manipulation** | 2024 · ICLR'25 | 发现环境与物体多样性远比单一环境示教数量重要，给出高效数据采集策略 | [arXiv](https://arxiv.org/abs/2410.18647) |
+| **REMAC** · Real-Time Robot Execution with Masked Action Chunking | 2026 · ICLR'26 | 指出异步推理中“块内不一致”问题，用掩码动作分块学习纠偏，让动作分块策略实时执行更稳健 | [arXiv](https://arxiv.org/abs/2601.20130) |
+| **TouchGuide** · Inference-Time Steering of Visuomotor Policies via Touch Guidance | 2026 · arXiv | 推理时用触觉可行性评分引导视觉运动策略的采样，配套 TacUMI 采集系统，系鞋带等接触任务大幅领先 | [arXiv](https://arxiv.org/abs/2601.20239) |
+| **Legato** · Learning Native Continuation for Action Chunking Flow Policies | 2026 · RSS'26 | 训练时让 flow 动作块策略从“已知动作 + 噪声”混合初始化去噪，原生学会块间衔接，优于 RTC | [arXiv](https://arxiv.org/abs/2602.12978) |
+| **BPP** · Long-Context Robot Imitation Learning by Focusing on Key History Frames | 2026 · arXiv | 只以 VLM 检测出的少量关键历史帧为条件，缓解长上下文模仿学习中的虚假相关与分布偏移 | [arXiv](https://arxiv.org/abs/2602.15010) |
+| **ABC** · Scalable Behavior Cloning with Open Data, Training, and Evaluation | 2026 · arXiv | 完全开源的行为克隆全栈（硬件、训练、仿真、400 小时数据），给出仿真与真机评测高度相关的协同训练配方 | [arXiv](https://arxiv.org/abs/2606.27375) |
+| **SimpleICL** · In-context Robot Learning Made Simple: A Democratized Recipe for Manipulation Tasks | 2026 · arXiv | 明确定义机器人上下文学习要模仿什么，并给出极简、可复现的上下文学习框架 | [arXiv](https://arxiv.org/abs/2609.38173) |
+| **Collective Experience Learning** · Learning from Fleet Experience: Collective Experience Learning Across 96 Robots | 2026 · arXiv | 96 台机器人汇聚部署中的执行经验更新共享策略再下发给机群，减少对专家纠正的依赖 | [arXiv](https://arxiv.org/abs/2610.25736) |
+| **DiscoDemo** · Discovering Efficient and Diverse Robot Demonstrations for Imitation Learning | 2026 · arXiv | 把 RL 当作示教“数据生成器”，发现多样且高效的成功解法，提升下游模仿学习的数据覆盖 | [arXiv](https://arxiv.org/abs/2610.32093) |
 
 > 模仿学习的数据采集（遥操作、UMI、数据增广）见 [`10-data-teleoperation.md`](./10-data-teleoperation.md)；大规模预训练版本见 [`01-vla-foundation-models.md`](./01-vla-foundation-models.md)。
+
+> 📅 **2026 年本方向全部 579 篇 arXiv 论文**（自动分类、按热度排序）见 [2026 年度总览](../digests/2026-annual-arxiv.md#03)，按月份见 [全量月报](../digests/README.md)。上表只收录其中经人工筛选的代表作。

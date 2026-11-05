@@ -22,3 +22,10 @@
 | **ConceptGraphs** · Open-Vocabulary 3D Scene Graphs for Perception and Planning | 2023 · ICRA'24 | 开放词汇 3D 场景图，物体级语义 + 关系，可直接交给 LLM 规划 | [arXiv](https://arxiv.org/abs/2309.16650) |
 | ⭐ **FoundationPose** · Unified 6D Pose Estimation and Tracking of Novel Objects | 2023 · CVPR'24 | 新物体 6D 位姿估计与跟踪的基础模型，支持有模型/无模型两种设定 | [arXiv](https://arxiv.org/abs/2312.08344) · [代码](https://github.com/NVlabs/FoundationPose) |
 | **EmbodMocap** · In-the-Wild 4D Human-Scene Reconstruction for Embodied Agents | 2026 · arXiv | 低成本采集真实场景中的 4D 人-场景交互数据，为具身智能体提供训练数据 | [arXiv](https://arxiv.org/abs/2602.23205) |
+| **Utonia** · Toward One Encoder for All Point Clouds | 2026 · arXiv | 首个跨遥感、室外 LiDAR、室内 RGB-D、CAD 与视频重建点云统一训练的自监督点云编码器 | [arXiv](https://arxiv.org/abs/2603.03283) |
+| **V-JEPA 2.1** · Unlocking Dense Features in Video Self-Supervised Learning | 2026 · arXiv | 在 V-JEPA 2 基础上学习稠密高质量的图像/视频表征（层级深监督、多模态 tokenizer），同时保留全局理解与世界建模能力 | [arXiv](https://arxiv.org/abs/2603.14482) |
+| **VEGA-3D** · Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding | 2026 · ECCV'26 | 把预训练视频扩散模型当作“潜在世界模拟器”，提取其隐式 3D 先验增强多模态大模型的空间理解 | [arXiv](https://arxiv.org/abs/2603.19235) |
+| **Lucida** · Parse, Generate, and Place for Composable Real-to-Sim Scene Modeling | 2026 · arXiv | “解析-生成-放置”的可组合 real-to-sim 场景建模流程，大幅提升场景级 3D 检测、位姿估计与重建精度 | [arXiv](https://arxiv.org/abs/2608.30821) |
+| **FAMOS** · Feed-Forward 3D Articulation Modeling from Sparse Observations | 2026 · arXiv | 前馈模型从稀疏、无序的局部点云直接预测可动部件分割与关节参数，服务铰接物体操作 | [arXiv](https://arxiv.org/abs/2609.20817) |
+
+> 📅 **2026 年本方向全部 442 篇 arXiv 论文**（自动分类、按热度排序）见 [2026 年度总览](../digests/2026-annual-arxiv.md#08)，按月份见 [全量月报](../digests/README.md)。上表只收录其中经人工筛选的代表作。

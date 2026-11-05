@@ -16,7 +16,8 @@ FUN-Robot/
 │   ├── ...                    #    共 12 个方向，每个文件分「🏛 经典」「🚀 最新进展」
 │   ├── 12-surveys.md
 │   └── notes/                 #    📝 精读笔记（一篇一个文件）
-├── digests/                   # 🗞 最新进展速递（按时间，月报/专题）
+├── digests/                   # 🗞 全量月报 + 年度总览（脚本生成）+ 专题速递
+├── data/                      # 📊 arxiv-<年>.csv 全量论文表格
 ├── projects/                  # 🛠 开源项目
 ├── datasets/                  # 📦 数据集
 ├── benchmarks/                # 📏 评测基准
@@ -27,7 +28,11 @@ FUN-Robot/
 │   └── project-entry.md       #    开源项目条目
 └── scripts/
     ├── new_paper.py           #    按模板新增论文（自动拉 arXiv 标题、插表、建笔记）
-    └── check.py               #    查重 + 链接检查 + 刷新统计
+    ├── check.py               #    查重 + 链接检查 + 刷新统计
+    ├── fetch_arxiv.py         #    抓取某时间段 arXiv 机器人/具身论文（全量）
+    ├── fetch_citations.py     #    Semantic Scholar 引用数与 TL;DR
+    ├── fetch_hf_upvotes.py    #    Hugging Face Daily Papers 点赞数
+    └── build_digest.py        #    自动分类 → 月报 / 年度总览 / CSV
 ```
 
 ## 二、新增一篇论文（3 步）
@@ -58,9 +63,11 @@ python scripts/new_paper.py 2303.04137 --short "Diffusion Policy" --note   # 只
 ```
 然后按 [`templates/paper-note.md`](./templates/paper-note.md) 的 7 个小节填写，示例见 [`papers/notes/2303.04137-diffusion-policy.md`](./papers/notes/2303.04137-diffusion-policy.md)。写完后在 [`papers/notes/README.md`](./papers/notes/README.md) 的索引表加一行。
 
-## 四、写月度速递
+## 四、月度更新（全量追踪 + 精选）
 
-复制 [`templates/digest.md`](./templates/digest.md) 到 `digests/YYYY-MM-主题.md`，填写后在 [`digests/README.md`](./digests/README.md) 的往期表格登记。
+1. 按 [`digests/README.md`](./digests/README.md#-如何更新每月一次) 的 4 条命令重新生成全量月报（全自动）；
+2. 打开当月月报，从「🔥 本月最热」和各方向 Top 10 中挑选代表作，用 `new_paper.py` 写入分类清单；
+3. 需要人工点评的专题速递：复制 [`templates/digest.md`](./templates/digest.md) 到 `digests/YYYY-MM-主题.md`，并在 `digests/README.md` 的「专题速递」表格登记。
 
 ## 五、质量规范
 

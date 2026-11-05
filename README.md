@@ -21,24 +21,24 @@
 
 适合：
 - 想系统入门具身智能的同学 → 从 [🧭 阅读路线](./papers/must-read.md) 开始
-- 想跟踪前沿的研究者 → 看各方向的「🚀 最新进展」和 [🗞 进展速递](./digests/README.md)
+- 想跟踪前沿的研究者 → 看各方向的「🚀 最新进展」和 [📅 2026 全量论文追踪](#-2026-全量论文追踪)
 - 想动手复现的开发者 → 看 [🛠 开源项目](./projects/README.md)
 
 ## 📚 论文库（12 个方向）
 
 | # | 方向 | 代表工作 |
 |---|---|---|
-| 01 | [VLA 与机器人基础模型](./papers/01-vla-foundation-models.md) | RT-2 · OpenVLA · π0 / π0.5 / π0.7 · GR00T · Gemini Robotics |
-| 02 | [具身推理与任务规划](./papers/02-embodied-reasoning-planning.md) | SayCan · Code as Policies · VoxPoser · ReKep · Eureka |
+| 01 | [VLA 与机器人基础模型](./papers/01-vla-foundation-models.md) | RT-2 · OpenVLA · π0 / π0.5 / π0.7 · GR00T · Gemini Robotics · Qwen-VLA |
+| 02 | [具身推理与任务规划](./papers/02-embodied-reasoning-planning.md) | SayCan · Code as Policies · VoxPoser · MolmoAct2 · CaP-X |
 | 03 | [模仿学习与策略学习](./papers/03-imitation-learning.md) | DAgger · Diffusion Policy · ACT · DP3 |
 | 04 | [强化学习与足式运动控制](./papers/04-rl-locomotion.md) | RMA · legged_gym · Extreme Parkour · HIL-SERL |
-| 05 | [人形机器人](./papers/05-humanoid.md) | DeepMimic · PHC · HumanPlus · HOVER · ASAP · BeyondMimic |
-| 06 | [操作、抓取与灵巧手](./papers/06-manipulation-dexterous.md) | Dex-Net · Rubik's Cube · PerAct · DexterityGen |
-| 07 | [世界模型与视频生成](./papers/07-world-models.md) | Dreamer · UniSim · Cosmos · V-JEPA 2 · DreamZero |
+| 05 | [人形机器人](./papers/05-humanoid.md) | DeepMimic · PHC · HumanPlus · ASAP · BeyondMimic · Ψ0 · Humanoid-GPT |
+| 06 | [操作、抓取与灵巧手](./papers/06-manipulation-dexterous.md) | Dex-Net · Rubik's Cube · PerAct · DexterityGen · EgoScale |
+| 07 | [世界模型与视频生成](./papers/07-world-models.md) | Dreamer · UniSim · Cosmos 3 · DreamZero · Fast-WAM · LingBot-VA |
 | 08 | [视觉表征与 3D 场景理解](./papers/08-perception-representation.md) | R3M · VC-1 · F3RM · FoundationPose |
 | 09 | [具身导航与移动操作](./papers/09-navigation.md) | R2R · ViNT · NoMaD · NaVILA · Uni-NaVid |
 | 10 | [数据采集、遥操作与数据集](./papers/10-data-teleoperation.md) | ALOHA · UMI · DROID · MimicGen · AgiBot World |
-| 11 | [仿真平台、Sim2Real 与评测基准](./papers/11-simulation-benchmarks.md) | MuJoCo · Isaac Gym / Lab · LIBERO · SIMPLER |
+| 11 | [仿真平台、Sim2Real 与评测基准](./papers/11-simulation-benchmarks.md) | MuJoCo · Isaac Lab · LIBERO · SIMPLER · RoboDojo |
 | 12 | [综述与教程](./papers/12-surveys.md) | VLA 综述 · 行为基础模型综述 · WAM 教程 |
 
 ### 收录统计
@@ -46,28 +46,38 @@
 <!-- STATS:START -->
 | 方向 | 经典 | 最新进展 | ⭐ 必读 | 合计 |
 |---|---:|---:|---:|---:|
-| [VLA 与机器人基础模型](papers/01-vla-foundation-models.md) | 7 | 25 | 10 | 32 |
-| [具身推理与任务规划（LLM / VLM for Robotics）](papers/02-embodied-reasoning-planning.md) | 10 | 7 | 5 | 17 |
-| [模仿学习与策略学习](papers/03-imitation-learning.md) | 10 | 5 | 6 | 15 |
-| [强化学习与足式运动控制](papers/04-rl-locomotion.md) | 7 | 4 | 6 | 11 |
-| [人形机器人（运动、全身控制与遥操作）](papers/05-humanoid.md) | 5 | 23 | 8 | 28 |
-| [操作、抓取与灵巧手](papers/06-manipulation-dexterous.md) | 13 | 10 | 6 | 23 |
-| [世界模型与视频生成](papers/07-world-models.md) | 6 | 14 | 7 | 20 |
-| [视觉表征与 3D 场景理解](papers/08-perception-representation.md) | 4 | 5 | 3 | 9 |
-| [具身导航与移动操作](papers/09-navigation.md) | 7 | 11 | 3 | 18 |
-| [数据采集、遥操作与大规模数据集](papers/10-data-teleoperation.md) | 2 | 12 | 5 | 14 |
-| [仿真平台、Sim2Real 与评测基准](papers/11-simulation-benchmarks.md) | 7 | 9 | 6 | 16 |
-| [综述与教程](papers/12-surveys.md) | 0 | 14 | 3 | 14 |
-| **总计** | **78** | **139** | **68** | **217** |
+| [VLA 与机器人基础模型](papers/01-vla-foundation-models.md) | 7 | 37 | 10 | 44 |
+| [具身推理与任务规划（LLM / VLM for Robotics）](papers/02-embodied-reasoning-planning.md) | 10 | 25 | 5 | 35 |
+| [模仿学习与策略学习](papers/03-imitation-learning.md) | 10 | 13 | 6 | 23 |
+| [强化学习与足式运动控制](papers/04-rl-locomotion.md) | 7 | 13 | 6 | 20 |
+| [人形机器人（运动、全身控制与遥操作）](papers/05-humanoid.md) | 5 | 34 | 8 | 39 |
+| [操作、抓取与灵巧手](papers/06-manipulation-dexterous.md) | 13 | 21 | 6 | 34 |
+| [世界模型与视频生成](papers/07-world-models.md) | 6 | 30 | 10 | 36 |
+| [视觉表征与 3D 场景理解](papers/08-perception-representation.md) | 4 | 10 | 3 | 14 |
+| [具身导航与移动操作](papers/09-navigation.md) | 7 | 18 | 3 | 25 |
+| [数据采集、遥操作与大规模数据集](papers/10-data-teleoperation.md) | 2 | 21 | 6 | 23 |
+| [仿真平台、Sim2Real 与评测基准](papers/11-simulation-benchmarks.md) | 7 | 22 | 7 | 29 |
+| [综述与教程](papers/12-surveys.md) | 0 | 26 | 3 | 26 |
+| **总计** | **78** | **270** | **73** | **348** |
 <!-- STATS:END -->
 
-## 🔥 当前前沿速览（截至 2026 年）
+## 📅 2026 全量论文追踪
 
-1. **VLA 从“模仿”走向“经验”**：π\*0.6 用 RL 后训练、π0.7 用丰富上下文实现可引导与组合泛化，Gemini Robotics 1.5 让动作与推理交错。
-2. **世界动作模型（World-Action Model）兴起**：DreamZero、DreamDojo 等用视频生成骨干同时预测画面与动作，被视为 VLA 之后的新范式。
-3. **人形全身控制走向基础模型**：从 BeyondMimic / GMT 的通用动作跟踪，到 X-WBC 等跨本体行为基础模型。
-4. **数据规模化**：AgiBot World、Xiaomi-Robotics-1 等百万轨迹 / 十万小时级真机数据，以及 UMI 式无机器人采集和人类视频学习。
-5. **基础设施成熟**：Isaac Lab、MuJoCo Playground 让大规模并行训练成为标配；LIBERO / SIMPLER 成为 VLA 评测基线。
+除了人工精选的分类清单，仓库还用脚本抓取了 **2026 年 1 月 1 日至 11 月 5 日 arXiv 上的全部机器人 / 具身智能论文**（cs.RO 全部 13994 篇 + 其他分类中的具身论文 966 篇，共 **14960** 篇），自动分到 18 个方向，并按热度（引用数 + Hugging Face 点赞）排序：
+
+- 📆 **按月**：[2026 全量月报索引](./digests/README.md)（每月一份，含当月最热 Top 15 与各方向清单）
+- 🏆 **全年**：[2026 年度总览](./digests/2026-annual-arxiv.md)（月度 × 方向统计、年度最热 Top 100、各方向年度 Top 20）
+- 📊 **表格**：[`data/arxiv-2026.csv`](./data/arxiv-2026.csv)（可用 Excel / pandas 自由筛选）
+- 🔄 **更新**：`scripts/fetch_arxiv.py` → `fetch_citations.py` → `fetch_hf_upvotes.py` → `build_digest.py`，步骤见 [digests/README.md](./digests/README.md#-如何更新每月一次)
+
+## 🔥 2026 前沿速览（基于全年 14960 篇论文的统计）
+
+1. **世界动作模型（WAM）爆发**：标题含 world-action / WAM 的论文从 1 月 0 篇增长到 10 月 81 篇（全年 298 篇）。年度引用最高的四篇论文（DreamZero、Fast-WAM、Cosmos Policy、LingBot-VA）全部是“视频模型 → 机器人策略”路线；Fast-WAM 发现收益主要来自训练时的视频协同训练，而不是测试时“想象未来”。
+2. **VLA 仍是最大主线**：标题含 VLA 的论文全年 1286 篇，9–10 月每月 200+。重点从“更大的模型”转向记忆（MEM、RoboMME）、RL 后训练（π\*0.6、ViVa、ACCRUE）、可引导性（π0.7）和触觉（TacVLA、N0-VTLA）。
+3. **“大模型 + 智能体框架”直接控制机器人**：下半年出现大量 harness / 机器人智能体工作（CaP-X、Show-Harness、OpenRUA、Zetta），摘要提到 GPT-6 Astra 的论文 9–10 月共 53 篇。普遍结论：通用大模型语义能力强，但精细、动态与双臂控制仍明显不足。
+4. **人类数据规模化**：EgoScale（2 万小时）、HumanNet（百万小时）、EgoVerse、UniDex 等用第一视角人类视频替代昂贵的遥操作，并观察到数据规模与性能的对数线性关系。
+5. **人形机器人持续升温**：标题含 humanoid 的论文全年 588 篇，10 月达 133 篇。全身控制走向大规模动作预训练（Humanoid-GPT）与跨本体基础模型（Ψ0、X-WBC）。
+6. **评测基础设施**：RoboDojo、RoboCasa365、RoboMemArena、WorldArena 等新基准与公开排行榜成为下半年论文的标准评测。
 
 ## ➕ 如何添加新论文
 
@@ -92,20 +102,20 @@ python scripts/check.py --update
 
 ```
 ├── papers/        # 论文库：12 个方向文件 + 必读路线 + notes/ 精读笔记
-├── digests/       # 按时间的进展速递（如 2026 年 1-2 月 arXiv humanoid 109 篇）
+├── digests/       # 2026 全量月报 + 年度总览（14960 篇，自动生成）+ 专题速递
+├── data/          # arxiv-2026.csv：全年论文表格（编号、日期、方向、标题、引用数…）
 ├── projects/      # 开源项目（框架、仿真器、人形控制、系统库）
 ├── datasets/      # 数据集
 ├── benchmarks/    # 评测基准与指标
 ├── templates/     # 所有模板
-├── scripts/       # new_paper.py（新增论文）、check.py（查重 + 统计）
+├── scripts/       # new_paper.py（新增论文）、check.py（查重 + 统计）、fetch_*/build_digest.py（全量追踪）
 ├── taxonomy.md    # 分类体系与标签词表
 └── CONTRIBUTING.md
 ```
 
 ## 维护节奏建议
 
-- **每周**：浏览 arXiv `cs.RO`，把候选论文记进当月速递
-- **每月**：整理一期 [速递](./digests/README.md)，把值得保留的升级进分类清单
+- **每月**：运行全量追踪脚本生成当月月报，从“本月最热”和各方向 Top 中挑选代表作，用 `new_paper.py` 升级进分类清单
 - **每年初**：把超过 2 年的「最新进展」挪进「经典」或删除，更新阅读路线
 
 欢迎通过 Issue（「📄 推荐论文」模板）或 PR 贡献。

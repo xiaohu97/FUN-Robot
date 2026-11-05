@@ -31,19 +31,19 @@
 <!-- STATS:START -->
 | 方向 | 经典 | 最新进展 | ⭐ 必读 | 合计 |
 |---|---:|---:|---:|---:|
-| [VLA 与机器人基础模型](./01-vla-foundation-models.md) | 7 | 25 | 10 | 32 |
-| [具身推理与任务规划（LLM / VLM for Robotics）](./02-embodied-reasoning-planning.md) | 10 | 7 | 5 | 17 |
-| [模仿学习与策略学习](./03-imitation-learning.md) | 10 | 5 | 6 | 15 |
-| [强化学习与足式运动控制](./04-rl-locomotion.md) | 7 | 4 | 6 | 11 |
-| [人形机器人（运动、全身控制与遥操作）](./05-humanoid.md) | 5 | 23 | 8 | 28 |
-| [操作、抓取与灵巧手](./06-manipulation-dexterous.md) | 13 | 10 | 6 | 23 |
-| [世界模型与视频生成](./07-world-models.md) | 6 | 14 | 7 | 20 |
-| [视觉表征与 3D 场景理解](./08-perception-representation.md) | 4 | 5 | 3 | 9 |
-| [具身导航与移动操作](./09-navigation.md) | 7 | 11 | 3 | 18 |
-| [数据采集、遥操作与大规模数据集](./10-data-teleoperation.md) | 2 | 12 | 5 | 14 |
-| [仿真平台、Sim2Real 与评测基准](./11-simulation-benchmarks.md) | 7 | 9 | 6 | 16 |
-| [综述与教程](./12-surveys.md) | 0 | 14 | 3 | 14 |
-| **总计** | **78** | **139** | **68** | **217** |
+| [VLA 与机器人基础模型](./01-vla-foundation-models.md) | 7 | 37 | 10 | 44 |
+| [具身推理与任务规划（LLM / VLM for Robotics）](./02-embodied-reasoning-planning.md) | 10 | 25 | 5 | 35 |
+| [模仿学习与策略学习](./03-imitation-learning.md) | 10 | 13 | 6 | 23 |
+| [强化学习与足式运动控制](./04-rl-locomotion.md) | 7 | 13 | 6 | 20 |
+| [人形机器人（运动、全身控制与遥操作）](./05-humanoid.md) | 5 | 34 | 8 | 39 |
+| [操作、抓取与灵巧手](./06-manipulation-dexterous.md) | 13 | 21 | 6 | 34 |
+| [世界模型与视频生成](./07-world-models.md) | 6 | 30 | 10 | 36 |
+| [视觉表征与 3D 场景理解](./08-perception-representation.md) | 4 | 10 | 3 | 14 |
+| [具身导航与移动操作](./09-navigation.md) | 7 | 18 | 3 | 25 |
+| [数据采集、遥操作与大规模数据集](./10-data-teleoperation.md) | 2 | 21 | 6 | 23 |
+| [仿真平台、Sim2Real 与评测基准](./11-simulation-benchmarks.md) | 7 | 22 | 7 | 29 |
+| [综述与教程](./12-surveys.md) | 0 | 26 | 3 | 26 |
+| **总计** | **78** | **270** | **73** | **348** |
 <!-- STATS:END -->
 
 ## 如何新增一篇论文？

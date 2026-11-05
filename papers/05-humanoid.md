@@ -19,8 +19,8 @@
 
 | 论文 | 年份 · 会议 | 核心贡献 | 资源 |
 |---|---|---|---|
-| **Humanoid Locomotion as Next Token Prediction** | 2024 · NeurIPS'24 | 把运动控制当作传感器-动作序列的自回归预测，可利用无动作的视频数据 | [arXiv](https://arxiv.org/abs/2402.19469) |
 | **ExBody** · Expressive Whole-Body Control for Humanoid Robots | 2024 · RSS'24 | 上半身模仿人类动作、下半身稳健跟踪速度指令，实现富表现力全身动作 | [arXiv](https://arxiv.org/abs/2402.16796) |
+| **Humanoid Locomotion as Next Token Prediction** | 2024 · NeurIPS'24 | 把运动控制当作传感器-动作序列的自回归预测，可利用无动作的视频数据 | [arXiv](https://arxiv.org/abs/2402.19469) |
 | **H2O** · Learning Human-to-Humanoid Real-Time Whole-Body Teleoperation | 2024 · IROS'24 | sim-to-data 过滤不可行动作 + RL 跟踪，RGB 相机实时全身遥操作 | [arXiv](https://arxiv.org/abs/2403.04436) |
 | **Humanoid-Gym** · RL for Humanoid Robot with Zero-Shot Sim2Real Transfer | 2024 · arXiv | 开源人形 RL 训练框架，带 Isaac Gym → MuJoCo 的 sim2sim 验证流程 | [arXiv](https://arxiv.org/abs/2404.05695) · [代码](https://github.com/roboterax/humanoid-gym) |
 | **OmniH2O** · Universal and Dexterous Human-to-Humanoid Whole-Body Teleoperation and Learning | 2024 · CoRL'24 | 统一运动学接口支持 VR / RGB / 语言等多种遥操作方式，并发布人形全身数据集 | [arXiv](https://arxiv.org/abs/2406.08858) |
@@ -37,10 +37,23 @@
 | ⭐ **BeyondMimic** · From Motion Tracking to Versatile Humanoid Control via Guided Diffusion | 2025 · arXiv | 高动态动作跟踪（侧手翻、旋转跳）+ 蒸馏为可引导扩散策略，测试时用代价函数完成导航、避障等任务 | [arXiv](https://arxiv.org/abs/2508.08241) |
 | **OmniRetarget** · Interaction-Preserving Data Generation for Humanoid Whole-Body Loco-Manipulation | 2025 · arXiv | 用交互网格保持人-物-地形关系的重定向，一条示教生成大量可行变体，支撑 30 秒长程技能 | [arXiv](https://arxiv.org/abs/2509.26633) |
 | **WholeBodyVLA** · Towards Unified Latent VLA for Whole-Body Loco-Manipulation Control | 2025 · arXiv | 统一潜在动作的 VLA，把移动与操作放进同一人形全身策略 | [arXiv](https://arxiv.org/abs/2512.11047) |
+| **Hiking in the Wild** · A Scalable Perceptive Parkour Framework for Humanoids | 2026 · arXiv | 端到端感知跑酷框架：深度 + 本体感知直接映射动作，配合落脚安全机制，人形在复杂野外地形以 2.5 m/s 行进 | [arXiv](https://arxiv.org/abs/2601.07718) |
+| **HumanX** · Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos | 2026 · arXiv | XGen（从单目视频生成物理可行的交互数据）+ XMimic（交互优先的模仿学习），无需逐任务设计即可从人类视频学到交互技能 | [arXiv](https://arxiv.org/abs/2602.02473) |
+| **HuMI** · Humanoid Manipulation Interface: Humanoid Whole-Body Manipulation from Robot-Free Demonstrations | 2026 · arXiv | 便携式无机器人全身动作采集 + 分层学习，人形学会跪、蹲、抛掷、双臂操作等全身操作任务 | [arXiv](https://arxiv.org/abs/2602.06643) |
+| **TextOp** · Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control | 2026 · arXiv | 实时文本驱动的人形动作生成与控制，执行中可流式修改语言指令并平滑切换动作 | [arXiv](https://arxiv.org/abs/2602.07439) |
+| **Perceptive Humanoid Parkour** · Chaining Dynamic Human Skills via Motion Matching | 2026 · arXiv | 动作匹配串联重定向后的人类高动态技能，结合视觉感知自主完成长程人形跑酷 | [arXiv](https://arxiv.org/abs/2602.15827) |
 | **Iterative Closed-Loop Motion Synthesis** · for Scaling the Capabilities of Humanoid Control | 2026 · arXiv | “训练 → 评估 → 再合成动作数据”闭环，持续扩展人形控制能力 | [arXiv](https://arxiv.org/abs/2602.21599) |
 | **LessMimic** · Long-Horizon Humanoid Interaction with Unified Distance Field Representations | 2026 · arXiv | 统一距离场表示人-物交互，提升长时程、多接触交互的泛化 | [arXiv](https://arxiv.org/abs/2602.21723) |
 | **Humanizing Robot Gaze Shifts** · A Framework for Natural Gaze Shifts in Humanoid Robots | 2026 · arXiv | 让人形机器人的注视转移更接近人类，面向导览、陪护等社交场景 | [arXiv](https://arxiv.org/abs/2602.21983) |
+| **OmniXtreme** · Breaking the Generality Barrier in High-Dynamic Humanoid Control | 2026 · arXiv | 把通用运动技能学习（大容量 flow matching 策略）与执行器感知的 sim2real 精调解耦，突破高动态人形控制的通用性瓶颈 | [arXiv](https://arxiv.org/abs/2602.23843) |
+| **Ψ0** · An Open Foundation Model Towards Universal Humanoid Loco-Manipulation | 2026 · arXiv | 开源人形移动操作基础模型：先用高质量第一视角人类操作数据预训练，再用真机人形轨迹后训练，优于混合噪声数据训练 | [arXiv](https://arxiv.org/abs/2603.12263) |
+| **UniT** · Toward a Unified Physical Language for Human-to-Humanoid Policy Learning and World Modeling | 2026 · arXiv | 以视觉锚定的统一潜在动作 tokenizer 作为人与人形之间的“物理语言”，同时服务策略学习（VLA-UniT）与世界建模 | [arXiv](https://arxiv.org/abs/2604.19734) |
+| **Humanoid-GPT** · Scaling Data and Structure for Zero-Shot Motion Tracking | 2026 · CVPR'26 | 在十亿级动作语料上训练 GPT 式因果 Transformer 做全身动作跟踪，零样本泛化到未见动作与控制任务 | [arXiv](https://arxiv.org/abs/2606.03985) |
 | **Perceptive Behavior Foundation Model** · Adapting Human Motion Priors to Robot-Centric Terrain | 2026 · arXiv | 让以动作为中心的行为基础模型感知地形，解决参考动作与环境不匹配的问题 | [arXiv](https://arxiv.org/abs/2606.08059) |
 | **X-WBC** · A Cross-Embodiment Foundation Model for Humanoid Whole-Body Control | 2026 · CoRL'26 | 因果 Transformer 从多机器人混合数据中学习可复用的运动结构，一个模型控制多种人形 | [arXiv](https://arxiv.org/abs/2609.15213) |
+| **InterEvolve** · Test-Time Evolution of Reward Programs for Humanoid Loco-Manipulation | 2026 · arXiv | 测试时进化奖励程序，复用冻结的物体感知行为基础模型完成从未训练过的人形移动操作任务 | [arXiv](https://arxiv.org/abs/2610.02196) |
+| **Reflex** · Visually Grounded Reactive Humanoid Control | 2026 · arXiv | 三阶段学习视觉驱动的反应式人形控制，仅凭第一视角 RGB-D 接住抛来的箱子（仿真成功率 85.7%） | [arXiv](https://arxiv.org/abs/2610.12772) |
 
 > 综述：A Survey of Behavior Foundation Model（人形全身控制）见 [`12-surveys.md`](./12-surveys.md)。
+
+> 📅 **2026 年本方向全部 663 篇 arXiv 论文**（自动分类、按热度排序）见 [2026 年度总览](../digests/2026-annual-arxiv.md#05)，按月份见 [全量月报](../digests/README.md)。上表只收录其中经人工筛选的代表作。
